@@ -55,7 +55,7 @@
         <div class="grid-responsive mx-2 lg:mx-0">
           <div class="col-full text-center">
             <h2 class="lg:mt-32 mb-8 lg:mb-16">
-              <i18n-t keypath="">
+              <i18n-t keypath="aboutUs.sections.transformation.title">
                 <template #highlight>
                   <span
                     class="text-primary"
