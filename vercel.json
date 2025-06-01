@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://www.uprintshop.com/$1"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
