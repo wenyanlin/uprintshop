@@ -1,0 +1,40 @@
+{
+  "sub_title": "",
+  "title": "About Us",
+  "mission_statement": "As a long-term value-driven company, we maintain an entrepreneurial mindset, integrate cutting-edge technologies, and continuously enhance customer experience.",
+  "sections": {
+    "commitment": {
+      "title": "Our Commitment",
+      "content": "With 25 years of deep cultivation in the printing industry, we have built a complete capability system from pre-press design to post-processing. Through continuous introduction of information systems and intelligent equipment, and cultivating professional technical teams, we ensure color accuracy and process quality while achieving our value promise of 'premium quality, affordable prices' for every printed product through large-scale production and refined management.",
+      "linkText": "Learn More"
+    },
+    "longTermValue": {
+      "title": "Long-term Value",
+      "content": "We seek team members and shareholders to think and act like long-term owners of 'Global Print House'. We pursue intrinsic value per share as our most important financial goal, because we believe intrinsic value (rather than short-term financial indicators) aligns with our commitment to creating long-term value for all stakeholders (customers, team members, long-term shareholders, and society).",
+      "linkText": "Learn More"
+    },
+    "transformation": {
+      "title": "We are {highlight} the rules of the printing industry",
+      "highlight": "reshaping",
+      "comparison": {
+        "supplier": {
+          "title": "From 'Supplier' to 'Platform' ──",
+          "description": "Open capacity, empower peers, share economies of scale"
+        },
+        "production": {
+          "title": "From 'Batch Production' to 'Mass Customization' ──",
+          "description": "Smart flexible production lines to meet personalized needs"
+        },
+        "efficiency": {
+          "title": "From 'High Cost Low Efficiency' to 'Simple and Affordable' ──",
+          "features": [
+            "No MOQ restrictions",
+            "Dynamic cost optimization",
+            "Ultra-fast delivery",
+            "Fully digital process"
+          ]
+        }
+      }
+    }
+  }
+}

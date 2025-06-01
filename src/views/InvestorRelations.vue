@@ -1,0 +1,167 @@
+<template>
+  <div class="investor-relations">
+    <HeroSection>
+      <template #subtitle>Investor Relations</template>
+      <template #title>投資者訊息</template>
+    </HeroSection>
+    <div class="flex flex-col items-center">
+      <div class="grid-responsive my-16">
+        <nav
+          aria-label="側邊導航"
+          class="z-10 bg-base-100 col-span-4 border-b border-base-300 md:border-none md:col-span-2 lg:col-span-3 h-fit sticky top-18 mb-8 wow animate__slideInUp md:mb-0 md:top-28"
+        >
+          <ul
+            class="w-full grid grid-cols-3 list-none md:flex md:flex-col lg:w-2/3"
+          >
+            <li v-for="item in menuItems" :key="item.id">
+              <RouterLink
+                :to="
+                  item.path
+                    ? `/investor-relations/${item.path}`
+                    : '/investor-relations'
+                "
+                class="inline-block py-2 text-lg text-base-content/80 btn btn-ghost w-full md:text-left"
+                >{{ item.name }}</RouterLink
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="col-span-4 px-2 md:px-0 md:col-span-6 lg:col-span-9 animate__animated animate__fadeIn"
+        >
+          <h2>
+            {{ currentItem.name }}
+          </h2>
+          <p class="pt-2 text-base-content/80" v-if="currentItem?.content">
+            {{ currentItem.content }}
+          </p>
+          <div class="flex flex-col mt-8">
+            <div
+              class="py-4 flex flex-col gap-0 border-b border-base-300 last:border-none md:flex-row md:pb-0 md:gap-4"
+              v-for="dateCategory in currentData"
+              :key="dateCategory.date"
+            >
+              <div
+                class="text-xl px-4 py-4 text-nowrap text-base-content md:px-0"
+              >
+                {{ dateCategory.date }}
+              </div>
+              <div class="w-full flex flex-col">
+                <a
+                  :href="`/api/file/${information.filePath}`"
+                  class="w-full flex gap-4 items-start py-4 pl-4 hover:bg-base-200 active:translate-y-0.5 duration-150"
+                  v-for="information in dateCategory.information"
+                  :key="information.subject"
+                  target="_blank"
+                >
+                  <div class="min-h-7 flex items-center">
+                    <IconFileText
+                      class="text-primary stroke-2 text-xl aspect-square"
+                    />
+                  </div>
+                  <p class="w-full">{{ information.subject }}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { storeToRefs } from 'pinia';
+import { computed, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { RouterLink, useRoute } from 'vue-router';
+import HeroSection from '../components/HeroSection.vue';
+import { useInvestorRelationsStore } from '../stores/investorRelations';
+const { locale } = useI18n();
+
+const irStore = useInvestorRelationsStore();
+const { currentData, currentCategory } = storeToRefs(irStore);
+
+const {
+  switchCategory,
+  refreshCategory,
+  // preloadCategories,
+  clearCache,
+  // hasCachedData
+} = irStore;
+
+const route = useRoute();
+const currentItem = computed(() => {
+  const param = route.params.data ?? '';
+  const item = menuItems.find((item) => item.path === param);
+  return item || menuItems[0];
+});
+
+const menuItems = [
+  { id: 1, name: '公告及通函', path: '' },
+  {
+    id: 2,
+    name: '上市文件',
+    path: 'listing-documents',
+    content: '本公司證券的要約純粹按招股章程所提供的資料作出',
+  },
+  { id: 3, name: '財務報告', path: 'financial-reports' },
+  { id: 4, name: '企業管治', path: 'corporate-governance' },
+  { id: 5, name: '月報表', path: 'monthly-returns' },
+  { id: 6, name: '展示文件', path: 'document-on-display' },
+];
+
+const refreshCurrentCategory = async () => {
+  try {
+    await refreshCategory(currentCategory.value);
+  } catch (err) {
+    console.error('重新載入失敗:', err);
+  }
+};
+
+const loadCategoryData = async (cat) => {
+  await irStore.fetchIRData(cat);
+};
+
+const switchToCategory = async (cat) => {
+  try {
+    await switchCategory(cat);
+  } catch (err) {
+    console.error('切換類別失敗:', err);
+  }
+};
+
+// const preloadAll = async () => {
+//   await preloadCategories([1, 2, 3, 4, 5])
+// }
+
+const clearAllCache = () => {
+  clearCache();
+};
+
+watch(
+  locale,
+  async (newLocale) => {
+    await refreshCurrentCategory();
+    console.log('??');
+  },
+  { immediate: true },
+);
+
+watch(
+  currentItem,
+  async (newItem) => {
+    await switchToCategory(newItem.id);
+  },
+  { immediate: true },
+);
+
+onMounted(async () => {});
+</script>
+
+<style lang="scss" scoped>
+.router-link-exact-active {
+  font-weight: 600;
+  color: var(--color-info);
+}
+</style>
