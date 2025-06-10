@@ -23,7 +23,7 @@
               <RouterLink
                 :to="`/${item.path}`"
                 class="btn btn-ghost uppercase px-3"
-                >{{ t(item.i18nKey) }}</RouterLink
+                >{{ $t(item.i18nKey) }}</RouterLink
               >
             </li>
           </ul>
@@ -92,7 +92,7 @@
             class="w-full btn btn-ghost rounded-none text-base-content"
             @click="closeMobileMenu"
             ><span class="container mx-auto text-left">{{
-              t(item.i18nKey)
+              $t(item.i18nKey)
             }}</span></RouterLink
           >
         </li>
@@ -105,34 +105,32 @@
 import Logo from '@/components/images/logo.vue';
 // import { preLoadCommonModules } from '@/i18n';
 import { onMounted, onUnmounted, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
 import { RouterLink, useRoute } from 'vue-router';
 
-const { t } = useI18n();
 const route = useRoute();
 const menu = ref([
   {
-    i18nKey: 'common.nav.about_us',
+    i18nKey: 'nav.aboutUs',
     path: 'about-us',
   },
   {
-    i18nKey: 'common.nav.milestone',
+    i18nKey: 'nav.milestone',
     path: 'milestone',
   },
   {
-    i18nKey: 'common.nav.corporate_information',
+    i18nKey: 'nav.corporateInformation',
     path: 'corporate-information',
   },
   {
-    i18nKey: 'common.nav.our_businesses',
+    i18nKey: 'nav.ourBusinesses',
     path: 'our-businesses',
   },
   {
-    i18nKey: 'common.nav.investor_relations',
+    i18nKey: 'nav.investorRelations',
     path: 'investor-relations',
   },
   {
-    i18nKey: 'common.nav.contact_us',
+    i18nKey: 'nav.contactUs',
     path: 'contact-us',
   },
 ]);

@@ -20,7 +20,7 @@
         <slot name="map">#map</slot>
       </div>
     </div>
-    <div class="w-full px-2 md:px-0 md:w-5/12 space-y-8">
+    <div class="w-full px-4 sm:px-2 md:px-0 md:w-5/12 space-y-8">
       <div>
         <p class="text-primary pb-2" v-if="$slots.subtitle">
           <slot name="subtitle"></slot>

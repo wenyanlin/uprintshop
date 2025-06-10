@@ -6,7 +6,7 @@
     </HeroSection>
     <div class="flex flex-col items-center">
       <section class="my-16 lg:my-32">
-        <div class="grid-responsive px-2 lg:px-0">
+        <div class="grid-responsive px-4 lg:px-0 xl:px-20">
           <div class="col-full mb-0 lg:mb-8 wow animate__slideInUp">
             <div class="w-full">
               <p class="text-primary pb-2">Board of Directors</p>

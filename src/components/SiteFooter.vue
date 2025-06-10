@@ -5,7 +5,7 @@
         class="col-full flex flex-col justify-between items-center gap-4 *:text-base-100 *:dark:text-base-content/50 px-2 sm:px-0 2xl:flex-row"
       >
         <p>
-          {{ t('common.footer.copyright') }}
+          {{ $t('footer.copyright') }}
         </p>
 
         <ul
@@ -30,31 +30,31 @@ import { useI18n } from 'vue-i18n';
 const { t, locale } = useI18n();
 const menu = ref([
   {
-    i18nKey: 'common.nav.about_us',
+    i18nKey: 'nav.aboutUs',
     path: 'about-us',
   },
   {
-    i18nKey: 'common.nav.milestone',
+    i18nKey: 'nav.milestone',
     path: 'milestone',
   },
   {
-    i18nKey: 'common.nav.corporate_information',
+    i18nKey: 'nav.corporateInformation',
     path: 'corporate-information',
   },
   {
-    i18nKey: 'common.nav.our_businesses',
+    i18nKey: 'nav.ourBusinesses',
     path: 'our-businesses',
   },
   {
-    i18nKey: 'common.nav.investor_relations',
+    i18nKey: 'nav.investorRelations',
     path: 'investor-relations',
   },
   {
-    i18nKey: 'common.nav.contact_us',
+    i18nKey: 'nav.contactUs',
     path: 'contact-us',
   },
   {
-    i18nKey: 'common.footer.privacy',
+    i18nKey: 'footer.privacy',
     path: 'about-us',
   },
 ]);

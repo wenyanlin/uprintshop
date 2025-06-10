@@ -27,7 +27,7 @@
           </ul>
         </nav>
         <div
-          class="col-span-4 px-2 md:px-0 md:col-span-6 lg:col-span-9 animate__animated animate__fadeIn"
+          class="col-span-4 px-4 md:px-0 md:col-span-6 lg:col-span-9 animate__animated animate__fadeIn"
         >
           <h2>
             {{ currentItem.name }}
@@ -37,7 +37,7 @@
           </p>
           <div class="flex flex-col mt-8">
             <div
-              class="py-4 flex flex-col gap-0 border-b border-base-300 last:border-none md:flex-row md:pb-0 md:gap-4"
+              class="-mx-4 flex flex-col gap-0 border-b border-base-300 last:border-none md:mx-0 md:flex-row md:gap-4"
               v-for="dateCategory in currentData"
               :key="dateCategory.date"
             >
@@ -143,7 +143,6 @@ watch(
   locale,
   async (newLocale) => {
     await refreshCurrentCategory();
-    console.log('??');
   },
   { immediate: true },
 );

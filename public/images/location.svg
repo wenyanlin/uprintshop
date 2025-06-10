@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="b" data-name="未命名漸層 88" x1="2.37" y1="24" x2="36.25" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0468ad"/>
+      <stop offset=".15" stop-color="#0468ad"/>
+      <stop offset=".27" stop-color="#0b72b6"/>
+      <stop offset=".43" stop-color="#0e7cbe"/>
+      <stop offset=".56" stop-color="#287bbe"/>
+      <stop offset=".69" stop-color="#4272b6"/>
+      <stop offset=".9" stop-color="#5367ac"/>
+      <stop offset="1" stop-color="#5f5ca0"/>
+    </linearGradient>
+  </defs>
+  <path d="m36.24,17.82C36.24,8.46,28.65.89,19.31.89S2.38,8.46,2.38,17.82c0,0-1.04,11.41,16.15,28.97.42.43,1.13.43,1.55,0,17.19-17.55,16.15-28.97,16.15-28.97Zm-16.93,6.18c-4,0-7.24-3.25-7.24-7.24s3.24-7.25,7.24-7.25,7.24,3.25,7.24,7.25-3.24,7.24-7.24,7.24Z" style="fill: url(#b); stroke-width: 0px;"/>
+  <path d="m45.63,31.36v13.32c0,.58-.46,1.06-1.05,1.06h-4.76v-8.01c0-2.48-2.02-4.51-4.51-4.51s-4.51,2.03-4.51,4.51v8.01h-4.76c-.58,0-1.06-.46-1.06-1.06v-13.32c0-.27.12-.52.32-.69l9.32-8.07c.39-.33.97-.33,1.37,0l9.31,8.07c.2.17.31.42.31.69Z" style="fill: #919caf; stroke-width: 0px;"/>
+</svg>

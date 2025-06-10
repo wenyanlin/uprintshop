@@ -36,4 +36,28 @@ const { t } = useI18n({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contact-block {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url(/images/map.jpg);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+}
+</style>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+TC:wght@100..900&display=swap');
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
@@ -21,6 +22,8 @@
   --color-warning-content: var(--color-warning-content);
   --color-error: var(--color-error);
   --color-error-content: var(--color-error-content);
+  --font-figtree:
+    'Figtree', 'Noto Sans TC', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 @import './themes.css';
 @import './components/button.scss';
@@ -41,7 +44,7 @@
   :root {
     @apply tracking-wide;
     font-family:
-      'Noto Sans TC', system-ui, Avenir, Helvetica, Arial, sans-serif;
+      'Noto Sans TC', 'Figtree', system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -49,6 +52,11 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  :root[lang='en'] {
+    font-family:
+      'Figtree', 'Noto Sans TC', system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 
   body {
@@ -76,34 +84,77 @@
   :where(h1, h2, h3, h4, h5, h6, p, dl) {
     @apply tracking-wide text-base-content text-lg;
   }
+  :root[lang='en'] :where(h1, h2, h3, h4, h5, h6, p, dl) {
+    @apply tracking-normal text-base;
+  }
 
   h1 {
     @apply text-4xl font-medium;
     @apply lg:text-5xl;
   }
+
+  :root[lang='en'] h1 {
+    @apply text-3xl font-medium;
+    @apply lg:text-4xl;
+  }
+
   h2 {
     @apply text-3xl font-medium;
     @apply lg:text-4xl;
   }
+
+  :root[lang='en'] h2 {
+    @apply text-2xl font-medium;
+    @apply lg:text-4xl;
+  }
+
   h3 {
     @apply text-2xl font-medium;
     @apply lg:text-3xl;
   }
+
+  :root[lang='en'] h3 {
+    @apply text-xl font-medium;
+    @apply lg:text-3xl;
+  }
+
   h4 {
     @apply text-xl font-medium;
     @apply lg:text-2xl;
   }
+
+  :root[lang='en'] h4 {
+    @apply text-lg font-medium;
+    @apply lg:text-2xl;
+  }
+
   h5 {
     @apply text-lg font-medium;
     @apply lg:text-xl;
   }
+
+  :root[lang='en'] h5 {
+    @apply text-base font-medium;
+    @apply lg:text-xl;
+  }
+
   h6 {
     @apply text-base font-medium;
     @apply lg:text-lg;
   }
+
+  :root[lang='en'] h6 {
+    @apply text-base font-medium;
+    @apply lg:text-lg;
+  }
+
   p {
     @apply text-base;
     @apply lg:text-lg;
+  }
+
+  :root[lang='en'] p {
+    @apply text-base;
   }
 
   ul {
@@ -121,13 +172,12 @@
     @apply pl-0;
   }
 
-  html[lang='zh-CHT'] a {
+  :root[lang='zh'] a {
     word-break: break-all;
     overflow-wrap: break-word;
     hyphens: auto;
   }
 }
-
 @layer utilities {
   .rounded-base {
     border-radius: var(--radius-box);

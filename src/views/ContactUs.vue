@@ -32,7 +32,7 @@
         </div>
       </section>
       <section class="bg-base-200 wow animate__slideInUp">
-        <div class="grid-responsive px-2 py-16 md:px-0 lg:py-32">
+        <div class="grid-responsive px-4 py-16 lg:px-0 xl:px-20 lg:py-32">
           <div class="col-span-8 space-y-4">
             <h4>誠信與問責</h4>
             <p>

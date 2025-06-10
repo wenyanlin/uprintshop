@@ -158,6 +158,21 @@
     --btn-fg: var(--color-error-content);
   }
 
+  .btn-outline {
+    &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-shadow: '';
+      --btn-bg: #0000;
+      --btn-fg: var(--color-base-100);
+      --btn-border: var(--color-base-100);
+    }
+    &:hover {
+      --btn-fg: var(--color-base-content);
+    }
+
+    @media (hover: hover) {
+    }
+  }
+
   .btn-ghost {
     &:not(.btn-active, :hover, :active:focus, :focus-visible) {
       --btn-shadow: '';

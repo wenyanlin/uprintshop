@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="b" data-name="未命名漸層 88" x1="0" y1="24" x2="48" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0468ad"/>
+      <stop offset=".15" stop-color="#0468ad"/>
+      <stop offset=".27" stop-color="#0b72b6"/>
+      <stop offset=".43" stop-color="#0e7cbe"/>
+      <stop offset=".56" stop-color="#287bbe"/>
+      <stop offset=".69" stop-color="#4272b6"/>
+      <stop offset=".9" stop-color="#5367ac"/>
+      <stop offset="1" stop-color="#5f5ca0"/>
+    </linearGradient>
+  </defs>
+  <path d="m47,38.19h-.19v-15.99c0-.38-.22-.74-.57-.9l-12.89-6.09v-7.34c0-.55-.45-1-1-1H12.43c-.55,0-1,.45-1,1v7.34H2.32c-.55,0-1,.45-1,1v21.98h-.32C.44,38.19,0,38.63,0,39.19v.95c0,.55.44,1,1,1h46c.55,0,1-.45,1-1v-.95c0-.56-.45-1-1-1Zm-6.22-12.52h3.73v5.45h-3.73v-5.45Zm-4.91,0h3.73v5.45h-3.73v-5.45Zm-10.83-14.82h5.34v3.22h-5.34v-3.22Zm0,4.23h5.34v3.22h-5.34v-3.22Zm0,4.24h5.34v3.22h-5.34v-3.22Zm-7.01-8.47h5.34v3.22h-5.34v-3.22Zm0,4.23h5.34v3.22h-5.34v-3.22Zm0,4.24h5.34v3.22h-5.34v-3.22Zm-8.36-1.39h2.36v3.22h-2.36v-3.22Zm0,4.24h2.36v3.22h-2.36v-3.22Zm0,4.24h2.36v3.22h-2.36v-3.22Zm-5.55-8.48h4.71v3.22h-4.71v-3.22Zm0,4.24h4.71v3.22h-4.71v-3.22Zm0,4.24h4.71v3.22h-4.71v-3.22Zm13.91,11.78v-12.52h12.35v12.52h-12.35Zm21.57.09h-3.73v-5.45h3.73v5.45Zm4.91,0h-3.73v-5.45h3.73v5.45Z" style="fill: url(#b); stroke-width: 0px;"/>
+</svg>

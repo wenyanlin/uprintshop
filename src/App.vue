@@ -1,7 +1,7 @@
 <template>
   <Navigation />
   <transition name="fade" mode="out-in">
-    <main class="min-h-screen" :key="locale">
+    <main class="min-h-screen">
       <RouterView />
     </main>
   </transition>
