@@ -206,6 +206,11 @@ export default {
           'Businesses seeking to eliminate minimum order constraints, achieve faster delivery than traditional manufacturing, while gaining richer product options, better value, and consistent quality.',
         linkText: 'Learn More',
       },
+      professionalPartners: {
+        title: 'Professional Empowerment Partners',
+        content:
+          'We invest in developing and integrating the most advanced industry-related software, establishing professional prepress document processing centers. This enables our production resource partners to avoid duplicate investments, reduce related fixed personnel and resource commitments, while significantly improving production efficiency and ensuring better quality assurance.',
+      },
     },
   },
   milestone: {
@@ -297,42 +302,66 @@ export default {
       boardOfDirectors: {
         subTitle: '',
         title: 'Board of Directors',
+        membersTitle: {
+          title: 'Title',
+          name: 'Name',
+          gender: 'Gender',
+          appointed: 'Date of Appointment',
+        },
         members: [
           {
-            name: 'LAM Shing Tai',
+            name: 'Lam Shing Tai',
             identity: 'Chairman and Chief Executive Officer',
+            gender: 'Male',
+            appointed: '2023-07-01',
           },
           {
-            name: 'LI Shuang',
+            name: 'Li Shuang',
             identity: 'Executive Director',
+            gender: 'Female',
+            appointed: '2023-07-01',
           },
           {
-            name: 'GAO Rong',
+            name: 'Kao Jung',
             identity: 'Executive Director',
+            gender: 'Male',
+            appointed: '2023-07-01',
           },
           {
-            name: 'YE Zimin',
+            name: 'Yip Chi Man',
             identity: 'Executive Director',
+            gender: 'Male',
+            appointed: '2023-07-01',
           },
           {
-            name: 'LI Zhenwu',
+            name: 'Li Zhen wu',
             identity: 'Executive Director',
+            gender: 'Male',
+            appointed: '2024-07-01',
           },
           {
-            name: 'WONG Chun Kwok',
+            name: 'Wong Chun Kwok',
             identity: 'Independent Non-Executive Director',
+            gender: 'Male',
+            appointed: '2022-07-01',
           },
           {
-            name: 'HO Ka Ming',
+            name: 'Ho Kar Ming',
             identity: 'Independent Non-Executive Director',
+            gender: 'Male',
+            appointed: '2022-07-01',
           },
           {
-            name: 'SO Suk Wan',
+            name: 'So Shuk Wan',
             identity: 'Independent Non-Executive Director',
+            gender: 'Female',
+            appointed: '2022-07-01',
           },
           {
-            name: 'SO Hang Fung',
+            name: 'So Hang Fung',
             identity: 'Company Secretary and Certified Public Accountant',
+            gender: 'Male',
+            appointed: '2021-02-09',
           },
         ],
       },

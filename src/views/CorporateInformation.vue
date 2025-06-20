@@ -19,7 +19,7 @@
               </h2>
             </div>
           </div>
-          <ProfileBlock
+          <!-- <ProfileBlock
             v-for="profile in $tm(
               'corporateInformation.sections.boardOfDirectors.members',
             )"
@@ -28,7 +28,57 @@
           >
             <template #title>{{ $rt(profile.name) }}</template>
             <template #subtitle>{{ $rt(profile.identity) }}</template>
-          </ProfileBlock>
+          </ProfileBlock> -->
+          <table
+            class="col-full border border-base-300 text-lg text-base-content wow animate__slideInUp"
+          >
+            <thead class="bg-base-200 font-semibold">
+              <tr class="*:p-4 *:w-1/4">
+                <td>
+                  {{
+                    $t(
+                      'corporateInformation.sections.boardOfDirectors.membersTitle.title',
+                    )
+                  }}
+                </td>
+                <td>
+                  {{
+                    $t(
+                      'corporateInformation.sections.boardOfDirectors.membersTitle.name',
+                    )
+                  }}
+                </td>
+                <td>
+                  {{
+                    $t(
+                      'corporateInformation.sections.boardOfDirectors.membersTitle.gender',
+                    )
+                  }}
+                </td>
+                <td>
+                  {{
+                    $t(
+                      'corporateInformation.sections.boardOfDirectors.membersTitle.appointed',
+                    )
+                  }}
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="profile in $tm(
+                  'corporateInformation.sections.boardOfDirectors.members',
+                )"
+                :key="$rt(profile.name)"
+                class="text-base-content/80 *:p-4"
+              >
+                <td>{{ $rt(profile.identity) }}</td>
+                <td>{{ $rt(profile.name) }}</td>
+                <td>{{ $rt(profile.gender) }}</td>
+                <td>{{ $rt(profile.appointed) }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
       <section class="md:bg-base-200 wow animate__slideInUp">
@@ -126,7 +176,6 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue';
 import LocationBlock from '../components/LocationBlock.vue';
-import ProfileBlock from '../components/ProfileBlock.vue';
 
 // const boardOfDirectors = [
 //   {

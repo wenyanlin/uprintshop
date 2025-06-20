@@ -34,9 +34,29 @@
               content-position="right"
               to="/"
               text=""
+              background-image="/images/bg-2.png"
             >
               <template #title>{{
                 $t('ourFocus.sections.benefits.title')
+              }}</template>
+            </MarkdownFeaturedBlock>
+          </div>
+        </div>
+      </section>
+      <section class="mb-16 wow animate__slideInUp">
+        <div class="grid-responsive">
+          <div class="col-full">
+            <MarkdownFeaturedBlock
+              :markdown-content="
+                $t('ourFocus.sections.professionalPartners.content')
+              "
+              content-position="left"
+              to="/"
+              text=""
+              background-image="/images/bg-3.png"
+            >
+              <template #title>{{
+                $t('ourFocus.sections.professionalPartners.title')
               }}</template>
             </MarkdownFeaturedBlock>
           </div>

@@ -192,6 +192,11 @@ export default {
         content:
           '希望擺脫最低起訂量限制、獲得比傳統製造更快的交付，同時擁有更豐富的產品選擇、更高性價比和更穩定的品質的您。',
       },
+      professionalPartners: {
+        title: '專業賦能合作夥伴',
+        content:
+          '我們投資開發及整合最先進的行業相關軟體，組建專業印前文件處理中心，使得生產資源合作夥伴無需重複投資，減少相關固定人力及資源投入，轉產效率極大提升的同時，品質更有保障。',
+      },
     },
   },
   milestone: {
@@ -283,42 +288,66 @@ export default {
       boardOfDirectors: {
         subTitle: 'Board of Directors',
         title: '董事會成員',
+        membersTitle: {
+          title: '職稱',
+          name: '姓名',
+          gender: '性別',
+          appointed: '委任日期',
+        },
         members: [
           {
             name: '林承大',
             identity: '主席及行政總裁',
+            gender: '男',
+            appointed: '2023-07-01',
           },
           {
             name: '李爽',
             identity: '執行董事',
+            gender: '女',
+            appointed: '2023-07-01',
           },
           {
             name: '高榮',
             identity: '執行董事',
+            gender: '男',
+            appointed: '2023-07-01',
           },
           {
             name: '葉子民',
             identity: '執行董事',
+            gender: '男',
+            appointed: '2023-07-01',
           },
           {
             name: '李振武',
             identity: '執行董事',
+            gender: '男',
+            appointed: '2024-07-01',
           },
           {
             name: '黃振國',
             identity: '獨立非執行董事',
+            gender: '男',
+            appointed: '2022-07-01',
           },
           {
             name: '何嘉明',
             identity: '獨立非執行董事',
+            gender: '男',
+            appointed: '2022-07-01',
           },
           {
             name: '蘇淑韻',
             identity: '獨立非執行董事',
+            gender: '女',
+            appointed: '2022-07-01',
           },
           {
             name: '蘇恒峯',
             identity: '公司秘書及執業會計師',
+            gender: '男',
+            appointed: '2021-02-09',
           },
         ],
       },
