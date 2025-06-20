@@ -12,7 +12,7 @@
             :text="$t('homepage.carousel.infoCards.milestone.cta')"
             icon="IconMilestone"
             icon-color="text-neutral-100"
-            class="wow animate__fadeIn"
+            class="flex-1 wow animate__fadeIn"
             data-wow-delay=".4s"
           >
             <template #title>{{
@@ -27,7 +27,7 @@
             :text="$t('homepage.carousel.infoCards.corporate.cta')"
             icon="IconBuilding"
             icon-color="text-neutral-100"
-            class="wow animate__fadeIn"
+            class="flex-1 wow animate__fadeIn"
             data-wow-delay=".6s"
           >
             <template #title>{{
@@ -42,7 +42,7 @@
             :text="$t('homepage.carousel.infoCards.group.cta')"
             icon="IconGroup"
             icon-color="text-neutral-100"
-            class="wow animate__fadeIn"
+            class="flex-1 wow animate__fadeIn"
             data-wow-delay=".8s"
           >
             <template #title>{{
