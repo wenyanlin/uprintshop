@@ -30,11 +30,9 @@
             <template #subtitle>{{ $rt(profile.identity) }}</template>
           </ProfileBlock> -->
           <div
-            class="col-full min-w-40 overflow-x-auto border border-base-300 rounded-(--radius-box)"
+            class="col-full min-w-40 overflow-x-auto border border-base-300 rounded-(--radius-box) wow animate__slideInUp"
           >
-            <table
-              class="w-full text-lg text-base-content wow animate__slideInUp"
-            >
+            <table class="w-full text-lg text-base-content">
               <thead class="bg-base-200 font-semibold">
                 <tr class="*:p-4 *:w-1/4">
                   <td>
