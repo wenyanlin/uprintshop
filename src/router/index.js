@@ -1,6 +1,7 @@
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { createRouter, createWebHistory } from 'vue-router';
+import i18n from '../i18n';
 import AboutUs from '../views/AboutUs.vue';
 import ContactUs from '../views/ContactUs.vue';
 import CorporateInformation from '../views/CorporateInformation.vue';
@@ -9,6 +10,7 @@ import InvestorRelations from '../views/InvestorRelations.vue';
 import Milestone from '../views/Milestone.vue';
 import OurBusinesses from '../views/OurBusinesses.vue';
 import OurFocus from '../views/OurFocus.vue';
+import PrivacySecurity from '../views/PrivacySecurity.vue';
 
 const routes = [
   {
@@ -16,7 +18,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '環球印館控股有限公司',
+      titleKey: 'title',
     },
   },
   {
@@ -24,7 +26,7 @@ const routes = [
     name: 'AboutUs',
     component: AboutUs,
     meta: {
-      title: '關於我們-環球印館控股有限公司',
+      titleKey: 'nav.aboutUs',
     },
   },
   {
@@ -32,7 +34,7 @@ const routes = [
     name: 'Milestone',
     component: Milestone,
     meta: {
-      title: '里程碑-環球印館控股有限公司',
+      titleKey: 'nav.milestone',
     },
   },
   {
@@ -40,7 +42,7 @@ const routes = [
     name: 'CorporateInformation',
     component: CorporateInformation,
     meta: {
-      title: '企業資訊-環球印館控股有限公司',
+      titleKey: 'nav.corporateInformation',
     },
   },
   {
@@ -48,7 +50,7 @@ const routes = [
     name: 'OurFocus',
     component: OurFocus,
     meta: {
-      title: '聚焦領域-環球印館控股有限公司',
+      titleKey: 'nav.ourFocus',
     },
   },
   {
@@ -56,7 +58,7 @@ const routes = [
     name: 'OurBusinesses',
     component: OurBusinesses,
     meta: {
-      title: '集團成員-環球印館控股有限公司',
+      titleKey: 'nav.ourBusinesses',
     },
   },
   {
@@ -64,7 +66,7 @@ const routes = [
     name: 'InvestorRelations',
     component: InvestorRelations,
     meta: {
-      title: '投資者訊息-環球印館控股有限公司',
+      titleKey: 'nav.investorRelations',
     },
   },
   {
@@ -72,7 +74,15 @@ const routes = [
     name: 'ContactUs',
     component: ContactUs,
     meta: {
-      title: '聯絡我們-環球印館控股有限公司',
+      titleKey: 'nav.contactUs',
+    },
+  },
+  {
+    path: '/privacy-security',
+    name: 'PrivacySecurity',
+    component: PrivacySecurity,
+    meta: {
+      titleKey: 'footer.privacy',
     },
   },
 ];
@@ -95,6 +105,23 @@ const router = createRouter({
   },
 });
 
+const updateTitle = (route) => {
+  const t = i18n.global.t;
+  const baseTitle = t('title');
+  let finalTitle = baseTitle;
+
+  if (route.meta.titleKey) {
+    const pageTitle = t(route.meta.titleKey);
+    if (route.name !== 'Home' && pageTitle !== baseTitle) {
+      finalTitle = `${pageTitle} - ${baseTitle}`;
+    } else {
+      finalTitle = pageTitle;
+    }
+  }
+
+  document.title = finalTitle;
+};
+
 NProgress.configure({ ease: 'ease', speed: 500 });
 
 router.beforeEach(async (to, from, next) => {
@@ -103,11 +130,19 @@ router.beforeEach(async (to, from, next) => {
     return;
   }
   NProgress.start();
+  updateTitle(to);
   if (to.meta.title) {
     document.title = to.meta.title;
   }
   next();
 });
+
+watch(
+  () => i18n.global.locale.value,
+  () => {
+    updateTitle(router.currentRoute.value);
+  },
+);
 
 router.afterEach(() => {
   NProgress.done();

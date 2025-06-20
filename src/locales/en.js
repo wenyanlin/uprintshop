@@ -1,4 +1,5 @@
 export default {
+  title: 'UNIVERSE PRINTSHOP HOLDINGS LIMITED',
   nav: {
     aboutUs: 'About Us',
     milestone: 'Milestone',

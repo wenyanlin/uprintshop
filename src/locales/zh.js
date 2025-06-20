@@ -1,4 +1,5 @@
 export default {
+  title: '環球印館控股有限公司',
   nav: {
     aboutUs: '關於我們',
     milestone: '里程碑',
@@ -409,5 +410,9 @@ export default {
         content: `我們環球印館控股有限公司致力以誠信和全面問責的態度經營業務。我們重視每一位員工和持份者若見證任何不道德或違法行為時都應該有權舉報。\n\n如果您真誠擔心公司內有任何不當或違法行為，請透過以下保密渠道聯繫我們：[whistleblowing{'@'}123print.com.hk](mailto:whistleblowing{'@'}123print.com.hk)`,
       },
     },
+  },
+  privacySecurity: {
+    subTitle: 'Privacy Security',
+    title: '隱私權條款',
   },
 };
