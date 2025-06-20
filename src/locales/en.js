@@ -281,12 +281,12 @@ export default {
       '123print': {
         title: 'Universe Printing',
         content:
-          'Established in 2001, Global Printing Group has transformed from simple film output to full-service printing solutions. By investing in digital technology, self-service platforms, and retail networks, we combine traditional and digital printing to provide comprehensive design, production, and sales services while actively pursuing global market expansion.',
+          'Since 2001, Global Printing Group has evolved from basic film output to comprehensive one-stop printing services. Through investments in digital technology, we integrate traditional and digital printing to provide end-to-end design, production, and sales services while actively expanding into global markets.',
       },
       printshop: {
         title: 'Print Shop',
         content:
-          'Print Shop Limited was established in Hong Kong in 2005, providing diversified printing services including offset, inkjet, and digital printing. Our products range from stationery and promotional materials to packaging boxes, and we offer thoughtful services such as photocopying, small-batch printing, and 24-hour express printing.',
+          'Founded in Hong Kong in 2005, Print Shop Limited operates through proprietary online self-service platforms and physical retail stores to provide diversified printing services, including offset, inkjet, and digital printing. Our product range spans from stationery and promotional materials to packaging boxes, complemented by thoughtful services such as photocopying, short-run printing, and 24-hour express printing.',
       },
     },
   },
