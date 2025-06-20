@@ -14,9 +14,9 @@
       :class="contentPosition"
     >
       <h4 class="pb-4"><slot name="title">title</slot></h4>
-      <p class="text-base-content/80">
+      <div class="text-base-content/80 **:text-base-content/80">
         <slot name="content"> content </slot>
-      </p>
+      </div>
       <RouterLink
         :to="to || ''"
         class="mt-8 btn btn-neutral btn-wide"

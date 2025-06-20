@@ -3,6 +3,7 @@ export default {
     aboutUs: 'About Us',
     milestone: 'Milestone',
     corporateInformation: 'Corporate Information',
+    ourFocus: 'Our Focus',
     ourBusinesses: 'Our Businesses',
     investorRelations: 'Investors',
     contactUs: 'Contact',
@@ -17,7 +18,7 @@ export default {
         {
           alt: 'Carousel Image',
           title: 'Redefining Possibilities',
-          lightTitle: 'Creating Excellence',
+          lightTitle: 'Unleash Peak Potential',
           subtitle:
             'With 25 years in printing, we built a complete capability system from pre-press design to finishing.',
           cta: 'About Us',
@@ -32,8 +33,8 @@ export default {
         },
         {
           alt: 'Carousel Image',
-          title: 'Changing the Game',
-          lightTitle: 'Delivering Impact',
+          title: 'Rewrite the Rules',
+          lightTitle: 'Reshape Industries',
           subtitle:
             'With 25 years in printing, we built a complete capability system from pre-press design to finishing.',
           cta: 'About Us',
@@ -142,7 +143,7 @@ export default {
   },
 
   aboutUs: {
-    sub_title: '',
+    sub_title: ' ',
     title: 'About Us',
     missionStatement:
       'As a long-term value-driven company, we maintain an entrepreneurial mindset, integrate cutting-edge technologies, and continuously enhance customer experience.',
@@ -184,6 +185,207 @@ export default {
             ],
           },
         },
+      },
+    },
+  },
+  ourFocus: {
+    subTitle: 'Our Focus',
+    title: 'Advanced Productivity Ecosystem',
+    missionStatement:
+      'We leverage digital integration to aggregate capacity, drive flexible manufacturing, and reshape industry productivity ecosystems.',
+    sections: {
+      whatIs: {
+        title: 'What is an Advanced Productivity Ecosystem?',
+        content:
+          'Digital platforms integrate distributed industry capacity to build flexible manufacturing ecosystems, enabling efficient resource allocation and elastic supply through **"Smart Collaborative Capacity Pools"**\n\nDistributed capacity pools enable dynamic capacity adjustment, improving overall equipment utilization\n\nResolving conflicts between flexible order demands and rigid production systems',
+        linkText: 'Learn More',
+      },
+      benefits: {
+        title: 'Who Benefits?',
+        content:
+          'Businesses seeking to eliminate minimum order constraints, achieve faster delivery than traditional manufacturing, while gaining richer product options, better value, and consistent quality.',
+        linkText: 'Learn More',
+      },
+    },
+  },
+  milestone: {
+    subTitle: '',
+    title: 'Milestone',
+    sections: {
+      featuredBlock: {
+        title: '25 Years of Excellence',
+        content:
+          'Universe Printshop Holdings Limited (HKEX: 8448), founded in 2001 and headquartered in vibrant Hong Kong, specializes in printing services and related businesses. Based in Hong Kong with coverage across Greater China, we have successfully expanded our operations internationally in recent years.',
+      },
+    },
+    milestones: [
+      {
+        year: 2024,
+        content: 'Commenced large-scale overseas business delivery',
+      },
+      {
+        year: 2023,
+        content:
+          "Comprehensive upgrade of the [Print Shop Online Self-Service Order Platform](https://op.printshop.hk), further expanding e-commerce applications with the latest information technology, and complete upgrade and reconstruction of the Group's information management platform (including internationally renowned financial management platforms)",
+      },
+      {
+        year: 2018,
+        content:
+          'Universe Printshop Holdings Limited was listed on the GEM of The Stock Exchange of Hong Kong Limited on March 28, 2018 under stock code 8448',
+      },
+      {
+        year: 2010,
+        content: 'Purchased the first eight-color offset printing machine',
+      },
+      {
+        year: 2009,
+        content: 'Opened a store in Kwun Tong',
+      },
+      {
+        year: 2006,
+        content:
+          'Opened the first two stores on Hong Kong Island, one in Fortress Hill and one in Wan Chai. In the same year, the first street shop in the New Territories opened in Yuen Long',
+      },
+      {
+        year: 2005,
+        content:
+          'The former Print Shop commenced operations under the business name "Print Shop". In 2005, introduced the "chain store printing services" concept in Hong Kong, providing printing services',
+      },
+      {
+        year: 2004,
+        content:
+          '- The first street shop opened in Kwun Tong in April 2004\n- Launched our first website [http://www.123print.com.hk](http://www.123print.com.hk)\n- Purchased the first four-color offset printing machine, undertaking large-volume offset printing business',
+      },
+      {
+        year: 2003,
+        content:
+          'The former Universe Printing was incorporated as a limited company in Hong Kong and began operating under the business name "Universe"',
+      },
+      {
+        year: 2001,
+        content: 'Established production facilities in Kwun Tong',
+      },
+    ],
+  },
+  ourBusinesses: {
+    subTitle: '',
+    title: 'Our Businesses',
+    sections: {
+      featuredBlock: {
+        title: 'Customer First',
+        content:
+          "Group companies serve xxx customers globally each year. Each member company operates autonomously under the group's strategic framework, gaining deep insights into target markets and precisely understanding customer needs. Through flexible and efficient management models, we ensure rapid response to market changes while maintaining high execution capabilities and entrepreneurial spirit.",
+      },
+    },
+    brands: {
+      '123print': {
+        title: 'Universe Printing',
+        content:
+          'Universe Printing Group has been developing since 2001, evolving from simple film output to comprehensive one-stop printing services. We have invested in digital technology and self-service platforms, operating over twenty retail stores across Hong Kong. Combining traditional and digital printing, we provide full-service solutions covering design, production, and sales, committed to expanding into global markets.',
+      },
+      printshop: {
+        title: 'Print Shop',
+        content:
+          'Print Shop Limited was established in Hong Kong in 2005, providing diversified printing services including offset, inkjet, and digital printing. Our products range from stationery and promotional materials to packaging boxes, and we offer thoughtful services such as photocopying, small-batch printing, and 24-hour express printing.',
+      },
+    },
+  },
+  corporateInformation: {
+    subTitle: '',
+    title: 'Corporate Information',
+    sections: {
+      boardOfDirectors: {
+        subTitle: '',
+        title: 'Board of Directors',
+        members: [
+          {
+            name: 'LAM Shing Tai',
+            identity: 'Chairman and Chief Executive Officer',
+          },
+          {
+            name: 'LI Shuang',
+            identity: 'Executive Director',
+          },
+          {
+            name: 'GAO Rong',
+            identity: 'Executive Director',
+          },
+          {
+            name: 'YE Zimin',
+            identity: 'Executive Director',
+          },
+          {
+            name: 'LI Zhenwu',
+            identity: 'Executive Director',
+          },
+          {
+            name: 'WONG Chun Kwok',
+            identity: 'Independent Non-Executive Director',
+          },
+          {
+            name: 'HO Ka Ming',
+            identity: 'Independent Non-Executive Director',
+          },
+          {
+            name: 'SO Suk Wan',
+            identity: 'Independent Non-Executive Director',
+          },
+          {
+            name: 'SO Hang Fung',
+            identity: 'Company Secretary and Certified Public Accountant',
+          },
+        ],
+      },
+      HeadQuarter: {
+        subTitle: '',
+        title: 'Group Headquarters',
+        address:
+          '2nd floor, Tsing Yi Industrial Centre Phase 1,\nNo. 1 to 33 Cheung Tat Road, Tsing Yi, New Territories, Hong Kong',
+      },
+      RegisteredOffice: {
+        subTitle: '',
+        title: 'Registered Office',
+        address:
+          'Cricket Square, Hutchins Drive, PO Box 2681,\nGrand Cayman, KY1-1111, Cayman Islands',
+      },
+      HongKongShareRegistrar: {
+        subTitle: '',
+        title: 'Hong Kong Share Registrar',
+        address: '17/F, Far East Finance Centre\n16 Harcourt Road\nHong Kong',
+      },
+    },
+  },
+  investorRelations: {
+    subTitle: '',
+    title: 'Investor Information',
+    nav: [
+      { name: 'Announcements and Circulars' },
+      {
+        name: 'Listing Documents',
+        content:
+          'The offer of securities of the Company is made solely on the information provided in the prospectus',
+      },
+      { name: 'Financial Reports' },
+      { name: 'Corporate Governance' },
+      { name: 'Monthly Returns' },
+      { name: 'Documents on Display' },
+    ],
+  },
+  contactUs: {
+    subTitle: '',
+    title: 'Contact Us',
+    sections: {
+      location: {
+        subTitle: '',
+        title: 'HONG KONG OFFICE',
+        address:
+          'Flat D, 8/F, Southeast Industrial Building, 611-619 Castle Peak, TsuenWan, New Territories, HongKong.',
+        telephone: '3565 4707',
+        fax: '3914 9127',
+      },
+      integrityAndAccountability: {
+        title: 'Integrity and Accountability',
+        content: `At Universe Printshop Holdings Limited, we are committed to operating with the utmost integrity and accountability. It is important that all employees and stakeholders feel empowered to speak up if they witness any unethical or illegal behavior.\n\nIf you have a genuine concern about misconduct or potential wrongdoing within our company, please contact us using the following confidential channels:：[whistleblowing{'@'}123print.com.hk](mailto:whistleblowing{'@'}123print.com.hk)`,
       },
     },
   },

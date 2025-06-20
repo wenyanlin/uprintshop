@@ -12,7 +12,7 @@
     outline-color: (--btn-color, var(--color-base-content));
     transition-property: color, background-color, border-color, box-shadow;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     border-radius: var(--radius-field);
     background-color: var(--btn-bg);
     /* ??? */
@@ -24,6 +24,7 @@
     text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
     touch-action: manipulation;
     box-shadow: none, var(--btn-shadow);
+    text-wrap: nowrap;
     /* --size: calc(var(--size-field, 0.25rem) * 10); */
     --btn-bg: var(--btn-color, var(--color-base-200));
     --btn-fg: var(--color-base-content);
@@ -48,7 +49,7 @@
         --btn-bg: color-mix(
           in oklab,
           var(--btn-color, var(--color-base-200)),
-          #000 7%
+          var(--color-base-content) 7%
         );
       }
 
@@ -136,6 +137,15 @@
   .btn-neutral {
     --btn-color: var(--color-neutral);
     --btn-fg: var(--color-neutral-content);
+    @media (hover: hover) {
+      &:hover {
+        --btn-bg: color-mix(
+          in oklab,
+          var(--btn-color, var(--color-base-200)),
+          var(--color-base-100) 7%
+        );
+      }
+    }
   }
 
   .btn-info {
@@ -160,16 +170,61 @@
 
   .btn-outline {
     &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-color: transparent;
       --btn-shadow: '';
       --btn-bg: #0000;
       --btn-fg: var(--color-base-100);
       --btn-border: var(--color-base-100);
     }
-    &:hover {
+
+    @media (hover: hover) {
+      &:hover {
+        --btn-fg: var(--color-base-100);
+        --btn-bg: color-mix(
+          in oklab,
+          var(--btn-color, var(--color-base-200)),
+          transparent 60%
+        );
+      }
+    }
+  }
+
+  :root.dark {
+    .btn-outline {
+      &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+        --btn-color: transparent;
+        --btn-shadow: '';
+        --btn-bg: #0000;
+        --btn-fg: var(--color-base-content);
+        --btn-border: var(--color-base-content);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          --btn-fg: var(--color-base-content);
+          --btn-bg: color-mix(
+            in oklab,
+            var(--btn-color, var(--color-base-content)),
+            transparent 60%
+          );
+        }
+      }
+    }
+  }
+
+  :root.dark .btn-outline.darkbg {
+    &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-shadow: '';
+      --btn-bg: #0000;
       --btn-fg: var(--color-base-content);
+      --btn-border: var(--color-base-content);
     }
 
     @media (hover: hover) {
+      &:hover {
+        --btn-fg: var(--color-base-content);
+        --btn-border: var(--color-base-content);
+      }
     }
   }
 
@@ -182,6 +237,27 @@
       &:not(:disabled, [disabled], .btn-disabled) {
         @apply outline-current;
         --btn-fg: currentColor;
+      }
+    }
+  }
+
+  .btn-arrow {
+    &::after {
+      content: '';
+      background-color: var(--btn-fg);
+      mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    @media (hover: hover) {
+      &:hover {
+        &::after {
+          transform: translateX(0.25rem);
+        }
       }
     }
   }

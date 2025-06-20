@@ -5,49 +5,41 @@
       <template #title>{{ $t('aboutUs.title') }}</template>
     </HeroSection>
     <div class="flex flex-col items-center">
-      <section class="my-16 wow animate__slideInUp">
-        <div class="grid-responsive px-4 lg:px-0">
-          <h2
-            class="col-span-4 leading-normal text-center text-accent font-normal upp md:col-span-8 lg:col-span-12 2xl:col-span-10 2xl:col-start-2"
-          >
-            {{ $t('aboutUs.missionStatement') }}
-          </h2>
-        </div>
-      </section>
+      <MissionStatementSection
+        ><template #default>{{
+          $t('aboutUs.missionStatement')
+        }}</template></MissionStatementSection
+      >
       <section class="mb-16 wow animate__slideInUp">
         <div class="grid-responsive">
           <div class="col-full">
-            <FeaturedBlock
+            <MarkdownFeaturedBlock
+              :markdown-content="$t('aboutUs.sections.commitment.content')"
+              content-position="left"
               to="/"
               :text="$t('aboutUs.sections.commitment.linkText')"
-              contentPosition="left"
             >
               <template #title>{{
                 $t('aboutUs.sections.commitment.title')
               }}</template>
-              <template #content>{{
-                $t('aboutUs.sections.commitment.content')
-              }}</template>
-            </FeaturedBlock>
+            </MarkdownFeaturedBlock>
           </div>
         </div>
       </section>
       <section class="mb-16 wow animate__slideInUp">
         <div class="grid-responsive">
           <div class="col-full">
-            <FeaturedBlock
+            <MarkdownFeaturedBlock
+              :markdown-content="$t('aboutUs.sections.longTermValue.content')"
+              content-position="right"
               to="/"
-              :text="$t('aboutUs.sections.commitment.linkText')"
-              contentPosition="right"
-              backgroundImage="/images/bg-2.png"
+              :text="$t('aboutUs.sections.longTermValue.linkText')"
+              background-image="/images/bg-2.png"
             >
               <template #title>{{
                 $t('aboutUs.sections.longTermValue.title')
               }}</template>
-              <template #content>{{
-                $t('aboutUs.sections.longTermValue.content')
-              }}</template>
-            </FeaturedBlock>
+            </MarkdownFeaturedBlock>
           </div>
         </div>
       </section>
@@ -114,8 +106,9 @@
 import { useI18n } from 'vue-i18n';
 import ComparisonBlock from '../components/ComparisonBlock.vue';
 import ContactSection from '../components/ContactSection.vue';
-import FeaturedBlock from '../components/FeaturedBlock.vue';
 import HeroSection from '../components/HeroSection.vue';
+import MarkdownFeaturedBlock from '../components/MarkdownFeaturedBlock.vue';
+import MissionStatementSection from '../components/MissionStatementSection.vue';
 
 const { locale, tm, rt } = useI18n();
 </script>

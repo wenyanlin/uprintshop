@@ -11,7 +11,7 @@
           class="z-10 bg-base-100 col-span-4 border-b border-base-300 md:border-none md:col-span-2 lg:col-span-3 h-fit sticky top-18 mb-8 wow animate__slideInUp md:mb-0 md:top-28"
         >
           <ul
-            class="w-full grid grid-cols-3 list-none md:flex md:flex-col lg:w-2/3"
+            class="w-full grid grid-cols-3 list-none md:flex md:flex-col lg:w-fit"
           >
             <li v-for="item in menuItems" :key="item.id">
               <RouterLink
@@ -20,7 +20,7 @@
                     ? `/investor-relations/${item.path}`
                     : '/investor-relations'
                 "
-                class="inline-block py-2 text-lg text-base-content/80 btn btn-ghost w-full md:text-left"
+                class="inline-block py-2 text-lg text-base-content/80 text-wrap btn btn-ghost w-full h-full md:text-left"
                 >{{ item.name }}</RouterLink
               >
             </li>
@@ -42,7 +42,7 @@
               :key="dateCategory.date"
             >
               <div
-                class="text-xl px-4 py-4 text-nowrap text-base-content md:px-0"
+                class="min-w-32 text-xl px-4 py-4 text-nowrap text-base-content md:px-0"
               >
                 {{ dateCategory.date }}
               </div>
@@ -77,7 +77,7 @@ import { useI18n } from 'vue-i18n';
 import { RouterLink, useRoute } from 'vue-router';
 import HeroSection from '../components/HeroSection.vue';
 import { useInvestorRelationsStore } from '../stores/investorRelations';
-const { locale } = useI18n();
+const { tm, rt, locale } = useI18n();
 
 const irStore = useInvestorRelationsStore();
 const { currentData, currentCategory } = storeToRefs(irStore);
@@ -93,23 +93,32 @@ const {
 const route = useRoute();
 const currentItem = computed(() => {
   const param = route.params.data ?? '';
-  const item = menuItems.find((item) => item.path === param);
-  return item || menuItems[0];
+  const item = menuItems.value.find((item) => item.path === param);
+  return item || menuItems.value[0];
 });
 
-const menuItems = [
-  { id: 1, name: '公告及通函', path: '' },
+const rawMenuItems = [
+  { id: 1, path: '' },
   {
     id: 2,
-    name: '上市文件',
     path: 'listing-documents',
-    content: '本公司證券的要約純粹按招股章程所提供的資料作出',
   },
-  { id: 3, name: '財務報告', path: 'financial-reports' },
-  { id: 4, name: '企業管治', path: 'corporate-governance' },
-  { id: 5, name: '月報表', path: 'monthly-returns' },
-  { id: 6, name: '展示文件', path: 'document-on-display' },
+  { id: 3, path: 'financial-reports' },
+  { id: 4, path: 'corporate-governance' },
+  { id: 5, path: 'monthly-returns' },
+  { id: 6, path: 'document-on-display' },
 ];
+
+const menuItems = computed(() => {
+  return tm('investorRelations.nav')
+    .map((item, index) => ({
+      id: rawMenuItems[index].id,
+      path: rawMenuItems[index].path,
+      name: item?.name ? rt(item.name) : '',
+      content: item?.content ? rt(item.content) : null,
+    }))
+    .filter(Boolean);
+});
 
 const refreshCurrentCategory = async () => {
   try {

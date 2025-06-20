@@ -5,13 +5,15 @@
     >
       <div class="grid-responsive items-center">
         <div
-          class="col-full flex flex-col gap-8 pt-16 py-14 space-x-8 px-4 xl:px-0 md:flex-row"
+          class="col-full flex flex-col gap-8 pt-16 py-14 space-x-8 px-4 xl:px-0 md:flex-row wow animate__fadeIn"
         >
           <BasicCard
             to="/milestone"
             :text="$t('homepage.carousel.infoCards.milestone.cta')"
             icon="IconMilestone"
             icon-color="text-neutral-100"
+            class="wow animate__fadeIn"
+            data-wow-delay=".4s"
           >
             <template #title>{{
               $t('homepage.carousel.infoCards.milestone.title')
@@ -25,6 +27,8 @@
             :text="$t('homepage.carousel.infoCards.corporate.cta')"
             icon="IconBuilding"
             icon-color="text-neutral-100"
+            class="wow animate__fadeIn"
+            data-wow-delay=".6s"
           >
             <template #title>{{
               $t('homepage.carousel.infoCards.corporate.title')
@@ -38,6 +42,8 @@
             :text="$t('homepage.carousel.infoCards.group.cta')"
             icon="IconGroup"
             icon-color="text-neutral-100"
+            class="wow animate__fadeIn"
+            data-wow-delay=".8s"
           >
             <template #title>{{
               $t('homepage.carousel.infoCards.group.title')
@@ -211,7 +217,7 @@ import BasicCard from './BasicCard.vue';
 const slides = ref([
   {
     id: 1,
-    image: '/images/carousel/01.png',
+    image: '/images/carousel/01.jpg',
     // alt: '輪播圖',
     // title: '重新定義可能',
     // lightTitle: '成就非凡印象',

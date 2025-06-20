@@ -3,7 +3,8 @@ export default {
     aboutUs: '關於我們',
     milestone: '里程碑',
     corporateInformation: '企業資訊',
-    ourBusinesses: '集團成員',
+    ourFocus: '聚焦領域',
+    ourBusinesses: '集團業務',
     investorRelations: '投資者訊息',
     contactUs: '聯絡我們',
   },
@@ -17,7 +18,7 @@ export default {
         {
           alt: '輪播圖',
           title: '重新定義可能',
-          lightTitle: '成就非凡印象',
+          lightTitle: '釋放巔峰潛能',
           subtitle:
             '在印刷行業深耕25年，我們構建了從印前設計到後期工藝的全鏈條能力體系。',
           cta: '關於我們',
@@ -33,7 +34,7 @@ export default {
         {
           alt: '輪播圖',
           title: '改寫遊戲規則',
-          lightTitle: '帶來深刻改變',
+          lightTitle: '重構產業生態',
           subtitle:
             '在印刷行業深耕25年，我們構建了從印前設計到後期工藝的全鏈條能力體系。',
           cta: '關於我們',
@@ -53,7 +54,7 @@ export default {
           cta: '了解更多',
         },
         group: {
-          title: '集團資訊',
+          title: '集團業務',
           content:
             '在印刷行業深耕25年，我們構建了從印前設計到後期工藝的全鏈條能力體系。',
           cta: '了解更多',
@@ -86,7 +87,7 @@ export default {
         },
       },
       ourBusinesses: {
-        label: '集團成員',
+        label: '集團業務',
         title: '立足香港 服務全球\n專業印刷解決方案遍及大中華及海外市場',
         cta: '了解更多',
         businesses: [
@@ -152,7 +153,7 @@ export default {
       longTermValue: {
         title: '長期價值',
         content:
-          '我們尋求團隊成員和股東能夠像"環球印舘"的長期所有者一樣思考和行動。我們追求每股內在價值作為我們最重要的財務目標，因為我們相信內在價值（而非短期財務指標）符合我們為所有利益相關者（客戶、團隊成員、長期股東和社會）創造長期價值的承諾。',
+          '我們尋求團隊成員和股東能夠像「環球印館」的長期所有者一樣思考和行動。我們追求每股內在價值作為我們最重要的財務目標，因為我們相信內在價值（而非短期財務指標）符合我們為所有利益相關者（客戶、團隊成員、長期股東和社會）創造長期價值的承諾。',
         linkText: '了解更多（補連結）',
       },
       transformation: {
@@ -172,6 +173,203 @@ export default {
             features: ['無MOQ限制', '動態優化成本', '極速交付', '全數位化流程'],
           },
         },
+      },
+    },
+  },
+  ourFocus: {
+    subTitle: 'Our Focus',
+    title: '新質生產力生態體系',
+    missionStatement:
+      '我們正在利用資訊化聚合產能，驅動柔性製造， 重構行業新質生產力生態體系',
+    sections: {
+      whatIs: {
+        title: '什麼是新質生產力生態體系？',
+        content:
+          '通過數位化平臺整合行業分散式產能，構建柔性製造生態，實現資源高效配置與彈性供給，形成 **「數智化協同產能池」**。\n通過分散式產能池實現產能動態調劑，提升整體設備利用率，化解靈活訂單需求與剛性生產體系的衝突',
+      },
+      benefits: {
+        title: '誰能從中受益？',
+        content:
+          '希望擺脫最低起訂量限制、獲得比傳統製造更快的交付，同時擁有更豐富的產品選擇、更高性價比和更穩定的品質的您。',
+      },
+    },
+  },
+  milestone: {
+    subTitle: 'Milestone',
+    title: '里程碑',
+    sections: {
+      featuredBlock: {
+        title: '二十五年征程',
+        content:
+          '環球印館控股有限公司，簡稱環球印館控股和環球印館（Universe Printshop Holdings Limited，港交所：8448），始創於2001年，總部位於活力之都的香港，主營印刷品類及相關業務，以香港為基地， 覆蓋大中華地區，近年更成功拓展海外業務。',
+      },
+    },
+    milestones: [
+      {
+        year: 2024,
+        content: '開始大規模海外業務交付',
+      },
+      {
+        year: 2023,
+        content:
+          '全面升級旗下[印館線上自助訂單平臺](https://op.printshop.hk)，更進一步拓展電子商務領域應用最新信息技術, 全面升級重構集團信息管理平臺(包括國際知名財務管理平臺)',
+      },
+      {
+        year: 2018,
+        content:
+          '環球印館控股有限公司在2018年3月28日以股份代號8448在香港聯合交易所有限公司的GEM上市',
+      },
+      {
+        year: 2010,
+        content: '購入首台八色柯式印刷機',
+      },
+      {
+        year: 2009,
+        content: '在觀塘開設一間店舖',
+      },
+      {
+        year: 2006,
+        content:
+          '在香港島開設首兩間店舖，一間位於炮台山，一間位於灣仔。同年，位於新界的首間街舖在元朗開業',
+      },
+      {
+        year: 2005,
+        content:
+          '前印館開業，商業名稱為「Print Shop」，2005在香港推出「連鎖店印刷服務」概念，提供印刷服務',
+      },
+      {
+        year: 2004,
+        content:
+          '- 首間街舖於2004年4月在觀塘開業\n- 推出我們首個網站[http://www.123print.com.hk](http://www.123print.com.hk)\n- 購入首台四色柯式印刷機，承接大批量柯式印刷業務',
+      },
+      {
+        year: 2003,
+        content:
+          '前環球印刷在香港註冊成立為有限公司，開始以商業名稱「Universe」經營業務',
+      },
+      {
+        year: 2001,
+        content: '在觀塘設立生產設施',
+      },
+    ],
+  },
+  ourBusinesses: {
+    subTitle: 'Our Businesses',
+    title: '集團業務',
+    sections: {
+      featuredBlock: {
+        title: '客戶至上',
+        content:
+          '集團旗下企業每年服務全球xxx客戶。各成員企業在集團戰略框架下自主運營，深入洞察目標市場，精准把握客戶需求。我們通過靈活高效的管理模式，確保快速回應市場變化，同時保持高度的執行力和創業精神。',
+      },
+    },
+    brands: {
+      '123print': {
+        title: '環球印刷',
+        content:
+          '環球印刷集團自2001年發展，從簡單菲林輸出到一站式印刷服務，並投資數碼技術、自助平台，全港設有二十多間門市，結合傳統與數碼印刷，提供設計、生產、銷售全方位服務，致力拓展全球市場。',
+      },
+      printshop: {
+        title: '印館',
+        content:
+          '印館有限公司2005年創立於香港，提供多元化印刷服務，包括柯式、噴墨及數碼印刷，產品涵蓋文具、宣傳品至包裝盒等，並提供影印、少量印刷及24小時快印等貼心服務。',
+      },
+    },
+  },
+  corporateInformation: {
+    subTitle: 'Corporate Information',
+    title: '企業資訊',
+    sections: {
+      boardOfDirectors: {
+        subTitle: 'Board of Directors',
+        title: '董事會成員',
+        members: [
+          {
+            name: '林承大',
+            identity: '主席及行政總裁',
+          },
+          {
+            name: '李爽',
+            identity: '執行董事',
+          },
+          {
+            name: '高榮',
+            identity: '執行董事',
+          },
+          {
+            name: '葉子民',
+            identity: '執行董事',
+          },
+          {
+            name: '李振武',
+            identity: '執行董事',
+          },
+          {
+            name: '黃振國',
+            identity: '獨立非執行董事',
+          },
+          {
+            name: '何嘉明',
+            identity: '獨立非執行董事',
+          },
+          {
+            name: '蘇淑韻',
+            identity: '獨立非執行董事',
+          },
+          {
+            name: '蘇恒峯',
+            identity: '公司秘書及執業會計師',
+          },
+        ],
+      },
+      HeadQuarter: {
+        subTitle: 'HEADQUARTER',
+        title: '集團總部',
+        address:
+          '2nd floor, Tsing Yi Industrial Centre Phase 1,\nNo. 1 to 33 Cheung Tat Road, Tsing Yi, New Territories, Hong Kong',
+      },
+      RegisteredOffice: {
+        subTitle: 'REGISTERED OFFICE',
+        title: '註冊辦事處',
+        address:
+          'Cricket Square, Hutchins Drive, PO Box 2681,\nGrand Cayman, KY1-1111, Cayman Islands',
+      },
+      HongKongShareRegistrar: {
+        subTitle: 'HONG KONG SHARE REGISTRAR',
+        title: '香港股份過戶處',
+        address: '17/F, Far East Finance Centre\n16 Harcourt Road\nHong Kong',
+      },
+    },
+  },
+  investorRelations: {
+    subTitle: 'Investor Relations',
+    title: '投資者訊息',
+    nav: [
+      { name: '公告及通函' },
+      {
+        name: '上市文件',
+        content: '本公司證券的要約純粹按招股章程所提供的資料作出',
+      },
+      { name: '財務報告' },
+      { name: '企業管治' },
+      { name: '月報表' },
+      { name: '展示文件' },
+    ],
+  },
+  contactUs: {
+    subTitle: 'Contact Us',
+    title: '聯絡我們',
+    sections: {
+      location: {
+        subTitle: 'HONG KONG OFFICE',
+        title: '香港寫字樓',
+        address: '香港新界荃灣青山公路611-619號東南工業大廈8樓D室',
+        telephone: '3565 4707',
+        fax: '3914 9127',
+      },
+      integrityAndAccountability: {
+        title: '誠信與問責',
+        content: `我們環球印館控股有限公司致力以誠信和全面問責的態度經營業務。我們重視每一位員工和持份者若見證任何不道德或違法行為時都應該有權舉報。\n\n如果您真誠擔心公司內有任何不當或違法行為，請透過以下保密渠道聯繫我們：[whistleblowing{'@'}123print.com.hk](mailto:whistleblowing{'@'}123print.com.hk)`,
       },
     },
   },

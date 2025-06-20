@@ -24,6 +24,8 @@
   --color-error-content: var(--color-error-content);
   --font-figtree:
     'Figtree', 'Noto Sans TC', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-noto-sans-tc:
+    'Noto Sans TC', 'Figtree', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 @import './themes.css';
 @import './components/button.scss';
@@ -81,10 +83,10 @@
     width: 100%;
   }
 
-  :where(h1, h2, h3, h4, h5, h6, p, dl) {
+  :where(h1, h2, h3, h4, h5, h6, p, dl, ul, ol) {
     @apply tracking-wide text-base-content text-lg;
   }
-  :root[lang='en'] :where(h1, h2, h3, h4, h5, h6, p, dl) {
+  :root[lang='en'] :where(h1, h2, h3, h4, h5, h6, p, dl, ul, ol) {
     @apply tracking-normal text-base;
   }
 

@@ -1,10 +1,8 @@
 <template>
   <Navigation />
-  <transition name="fade" mode="out-in">
-    <main class="min-h-screen">
-      <RouterView />
-    </main>
-  </transition>
+  <main class="min-h-screen">
+    <RouterView />
+  </main>
   <SiteFooter />
   <BackToTop class="fixed right-4 bottom-24 text-primary" />
 </template>
@@ -28,13 +26,4 @@ watch(
 );
 </script>
 
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.15s;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<style scoped></style>

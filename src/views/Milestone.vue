@@ -1,25 +1,22 @@
 <template>
   <div class="milestone">
     <HeroSection>
-      <template #subtitle>Milestone</template>
-      <template #title>里程碑</template>
+      <template #subtitle>{{ $t('milestone.subTitle') }}</template>
+      <template #title>{{ $t('milestone.title') }}</template>
     </HeroSection>
     <div class="flex flex-col items-center">
       <section class="my-16 wow animate__slideInUp">
         <div class="grid-responsive">
           <div class="col-full">
-            <FeaturedBlock
-              contentPosition="left"
-              backgroundImage="/images/bg-3.png"
+            <MarkdownFeaturedBlock
+              :markdown-content="$t('milestone.sections.featuredBlock.content')"
+              content-position="left"
+              background-image="/images/bg-3.png"
             >
-              <template #title>二十五年征程</template>
-              <template #content
-                >環球印館控股有限公司，簡稱環球印館控股和環球印館（Universe
-                Printshop Holdings
-                Limited，港交所：8448），始創於2001年，總部位於活力之都的香港，主營印刷品類及相關業務，以香港為基地,
-                近年來大中華地區,更成功拓展海外業務。</template
-              >
-            </FeaturedBlock>
+              <template #title>{{
+                $t('milestone.sections.featuredBlock.title')
+              }}</template>
+            </MarkdownFeaturedBlock>
           </div>
         </div>
       </section>
@@ -32,12 +29,16 @@
               <div
                 class="milestone__timeline__item milestone-responsive grid md:flex gap-x-8 gap-y-4 md:gap-12 mb-16 last:mb-0 wow animate__slideInUp"
                 v-for="milestone in milestones"
-                :key="milestone"
+                :key="milestone.year"
               >
                 <div
                   class="milestone-image w-full md:w-64 h-fit aspect-video bg-base-200 overflow-hidden rounded-(--radius-box)"
                 >
-                  <img src="" alt="" />
+                  <img
+                    :src="`images/milestone/${milestone.year}.jpg`"
+                    :alt="milestone.year"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
                 <span
                   class="milestone-dot relative mt-5 w-4 h-4 aspect-square bg-primary rounded-full flex-shrink-0"
@@ -49,7 +50,7 @@
                     {{ milestone.year }}
                   </div>
                   <div
-                    class="text-lg lg:text-xl text-base-content/80"
+                    class="text-base-content/80"
                     v-html="milestone.content"
                   ></div>
                 </div>
@@ -68,78 +69,22 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import ContactSection from '../components/ContactSection.vue';
-import FeaturedBlock from '../components/FeaturedBlock.vue';
 import HeroSection from '../components/HeroSection.vue';
+import MarkdownFeaturedBlock from '../components/MarkdownFeaturedBlock.vue';
 import { parseMarkdown } from '../utils/markdown.js';
 
-const rawMilestones = [
-  {
-    id: '2024-1',
-    year: 2024,
-    content: '開始大規模海外業務交付',
-  },
-  {
-    id: '2023-1',
-    year: 2023,
-    content:
-      '全面升級旗下[印館線上自助訂單平臺](https://op.printshop.hk)，更進一步拓展電子商務領域應用最新信息技術, 全面升級重構集團信息管理平臺(包括國際知名財務管理平臺)',
-  },
-  {
-    id: '2018-1',
-    year: 2018,
-    content:
-      '環球印館控股有限公司在2018年3月28日以股份代號8448在香港聯合交易所有限公司的GEM上市',
-  },
-  {
-    id: '2010-1',
-    year: 2010,
-    content: '購入首台八色柯式印刷機',
-  },
-  {
-    id: '2009-1',
-    year: 2009,
-    content: '在觀塘開設一間店舖',
-  },
-  {
-    id: '2006-1',
-    year: 2006,
-    content:
-      '在香港島開設首兩間店舖，一間位於炮台山，一間位於灣仔。同年，位於新界的首間街舖在元朗開業',
-  },
-  {
-    id: '2005-1',
-    year: 2005,
-    content:
-      '前印館開業，商業名稱為「Print Shop」，2005在香港推出「連鎖店印刷服務」概念，提供印刷服務',
-  },
-  {
-    id: '2004-1',
-    year: 2004,
-    content:
-      '- 首間街舖於2004年4月在觀塘開業\n- 推出我們首個網站[http://www.123print.com.hk](http://www.123print.com.hk)\n- 購入首台四色柯式印刷機，承接大批量柯式印刷業務',
-  },
-  {
-    id: '2003-1',
-    year: 2003,
-    content:
-      '前環球印刷在香港註冊成立為有限公司，開始以商業名稱「Universe」經營業務',
-  },
-  {
-    id: '2001-1',
-    year: 2001,
-    content: '在觀塘設立生產設施',
-  },
-];
+const { tm, rt } = useI18n();
 
-const milestones = computed(() => {
-  return rawMilestones
-    .map((milestone) => ({
-      ...milestone,
-      content: parseMarkdown(milestone?.content),
+const milestones = computed(() =>
+  tm('milestone.milestones')
+    .map((item) => ({
+      year: rt(item.year),
+      content: parseMarkdown(rt(item.content)),
     }))
-    .filter(Boolean);
-});
+    .filter(Boolean),
+);
 </script>
 
 <style lang="scss" scoped>

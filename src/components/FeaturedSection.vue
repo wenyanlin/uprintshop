@@ -17,7 +17,7 @@
         </div>
         <RouterLink
           to="/about-us"
-          class="btn btn-neutral btn-wide w-fit h-fit hidden md:block"
+          class="btn btn-neutral btn-arrow btn-wide w-fit h-fit hidden md:inline-flex"
           >{{ $t('homepage.sections.featured.cta') }}</RouterLink
         >
       </div>
@@ -25,7 +25,11 @@
     <div
       class="max-h-128 bg-accent xl:w-[calc(50vw+34.5rem)] 2xl:w-[calc(50vw+42.5rem)] overflow-hidden xl:rounded-l-(--radius-box) wow animate__slideInUp"
     >
-      <img src="/images/bg-5.jpg" alt="" class="w-full object-cover" />
+      <img
+        src="/images/bg-5.jpg"
+        alt=""
+        class="w-full object-cover transition-transform duration-300 ease-in-out"
+      />
     </div>
     <div class="grid-responsive wow animate__slideInUp">
       <div
@@ -37,7 +41,11 @@
             <div
               class="font-figtree font-bold text-base-content text-center text-5xl lg:text-6xl"
             >
-              {{ $t('homepage.sections.featured.stats.experience.number') }}
+              <AnimatedCounter
+                :stat="$t('homepage.sections.featured.stats.experience.number')"
+                :duration="250"
+                class="wow animate__slideInUp"
+              />
             </div>
             <p class="text-base-content text-center md:text-left">
               {{ $t('homepage.sections.featured.stats.experience.label') }}
@@ -50,7 +58,11 @@
             <div
               class="font-figtree font-bold text-base-content text-center text-5xl lg:text-6xl"
             >
-              {{ $t('homepage.sections.featured.stats.business.number') }}
+              <AnimatedCounter
+                :stat="$t('homepage.sections.featured.stats.business.number')"
+                :duration="500"
+                class="wow animate__slideInUp"
+              />
             </div>
             <p class="text-base-content md:text-left">
               {{ $t('homepage.sections.featured.stats.business.label') }}
@@ -63,7 +75,11 @@
             <div
               class="font-figtree font-bold text-base-content text-center text-5xl lg:text-6xl"
             >
-              {{ $t('homepage.sections.featured.stats.locations.number') }}
+              <AnimatedCounter
+                :stat="$t('homepage.sections.featured.stats.locations.number')"
+                :duration="750"
+                class="wow animate__slideInUp"
+              />
             </div>
             <p class="text-base-content md:text-left">
               {{ $t('homepage.sections.featured.stats.locations.label') }}
@@ -76,7 +92,11 @@
             <div
               class="font-figtree font-bold text-base-content text-center text-5xl lg:text-6xl"
             >
-              {{ $t('homepage.sections.featured.stats.employees.number') }}
+              <AnimatedCounter
+                :stat="$t('homepage.sections.featured.stats.employees.number')"
+                :duration="1000"
+                class="wow animate__slideInUp"
+              />
             </div>
             <p class="text-base-content md:text-left">
               {{ $t('homepage.sections.featured.stats.employees.label') }}
@@ -88,7 +108,7 @@
     <div class="w-full flex justify-center">
       <RouterLink
         to="/about-us"
-        class="btn btn-neutral btn-wide w-fit h-fit mt-8 md:hidden"
+        class="btn btn-neutral btn-arrow btn-wide w-fit h-fit mt-8 md:hidden"
         >{{ $t('homepage.sections.featured.cta') }}</RouterLink
       >
     </div>
@@ -97,10 +117,21 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import AnimatedCounter from './AnimatedCounter.vue';
 import IconBuilding from './icons/IconBuilding.vue';
 import IconGroup from './icons/IconGroup.vue';
 import IconMapPinHouse from './icons/IconMapPinHouse.vue';
 import IconMedal from './icons/IconMedal.vue';
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.featured-section {
+  @media (hover: hover) {
+    &:has(.btn:hover) {
+      img {
+        transform: scale(105%);
+      }
+    }
+  }
+}
+</style>

@@ -1,13 +1,16 @@
 <template>
   <section
-    class="hero-section w-full bg-no-repeat bg-cover bg-center"
+    class="hero-section w-full bg-no-repeat bg-cover bg-center min-h-101"
     :style="{ backgroundImage: `url(${backgroundImage})` }"
   >
     <div class="py-40 grid-responsive">
       <div
-        class="col-full text-center *:text-base-100 *:dark:text-base-content"
+        class="col-full text-center uppercase *:text-base-100 *:dark:text-base-content"
       >
-        <h5 class="uppercase lg:pb-2 animate__animated animate__fadeInUp">
+        <h5
+          class="lg:pb-2 animate__animated animate__fadeInUp"
+          v-if="$te('aboutUs.subTitle')"
+        >
           <slot name="subtitle">subtitle</slot>
         </h5>
         <h1 class="animate__animated animate__fadeInUp">

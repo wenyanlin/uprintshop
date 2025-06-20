@@ -2,15 +2,17 @@
   <section class="contact-block">
     <div class="grid-responsive py-16 md:py-32 lg:py-64">
       <div class="col-full text-center">
-        <div class="mb-16">
+        <div class="mb-16 *:transition-all *:duration-300 *:ease-in-out">
           <h4 class="w-full text-base-content/50 pb-2 font-normal">
             {{ t('subTitle') }}
           </h4>
           <h2>{{ t('title') }}</h2>
         </div>
-        <RouterLink to="/contact-us" class="btn btn-primary btn-wide">{{
-          t('button')
-        }}</RouterLink>
+        <RouterLink
+          to="/contact-us"
+          class="btn btn-primary btn-arrow btn-wide"
+          >{{ t('button') }}</RouterLink
+        >
       </div>
     </div>
   </section>
@@ -56,8 +58,31 @@ const { t } = useI18n({
     background-size: cover, cover;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
-    filter: grayscale(100%);
+    filter: blur(2px) grayscale(100%);
     opacity: 0.5;
+    transition: filter 0.3s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &:has(.btn:hover) {
+      &::before {
+        filter: grayscale(0%);
+      }
+
+      @media (min-width: 40rem) {
+        h4,
+        h2 {
+          letter-spacing: 0.25rem;
+        }
+      }
+
+      h4 {
+        transform: translateY(-0.75rem);
+      }
+      h2 {
+        transform: translateY(-0.5rem);
+      }
+    }
   }
 }
 </style>

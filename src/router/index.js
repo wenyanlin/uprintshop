@@ -8,6 +8,7 @@ import Home from '../views/Home.vue';
 import InvestorRelations from '../views/InvestorRelations.vue';
 import Milestone from '../views/Milestone.vue';
 import OurBusinesses from '../views/OurBusinesses.vue';
+import OurFocus from '../views/OurFocus.vue';
 
 const routes = [
   {
@@ -40,6 +41,14 @@ const routes = [
     component: CorporateInformation,
     meta: {
       title: '企業資訊-環球印館控股有限公司',
+    },
+  },
+  {
+    path: '/our-focus',
+    name: 'OurFocus',
+    component: OurFocus,
+    meta: {
+      title: '聚焦領域-環球印館控股有限公司',
     },
   },
   {

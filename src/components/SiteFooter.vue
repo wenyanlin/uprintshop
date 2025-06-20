@@ -34,12 +34,8 @@ const menu = ref([
     path: 'about-us',
   },
   {
-    i18nKey: 'nav.milestone',
-    path: 'milestone',
-  },
-  {
-    i18nKey: 'nav.corporateInformation',
-    path: 'corporate-information',
+    i18nKey: 'nav.ourFocus',
+    path: 'our-focus',
   },
   {
     i18nKey: 'nav.ourBusinesses',

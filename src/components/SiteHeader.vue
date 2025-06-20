@@ -3,8 +3,8 @@
     class="navbar z-40 fixed top-0 transition-colors border-b duration-500 flex flex-col"
     :class="[
       isScrolled
-        ? 'bg-base-100 *:text-base-content border-base-300'
-        : 'bg-neutral/0 *:text-base-100 border-transparent dark:*:text-base-content  ',
+        ? 'bg-base-100 text-base-content border-base-300'
+        : 'bg-neutral/0 text-base-100 border-transparent dark:*:text-base-content  ',
     ]"
   >
     <div class="grid-responsive navbar__inner">
@@ -12,25 +12,64 @@
         <div class="flex-1 py-2">
           <RouterLink
             to="/"
-            class="h-14 btn btn-ghost md:h-16 origin-top-left transition-transform duration-300"
+            class="h-12 btn btn-ghost md:h-16 origin-top-left transition-transform duration-300"
             :class="[isScrolled ? 'xl:scale-100' : 'xl:scale-120']"
             ><Logo
           /></RouterLink>
         </div>
-        <div class="hidden xl:flex items-center pr-2">
-          <ul class="menu menu-horizontal flex list-none">
-            <li v-for="item in menu" :key="item.name">
+        <div class="hidden xl:flex items-center pr-2" @mouseleave="closeSubnav">
+          <ul
+            class="menu menu-horizontal flex list-none relative"
+            @click="closeSubnav"
+          >
+            <li
+              v-for="(item, index) in menu"
+              :key="item.name"
+              @mouseenter="openSubnav(index)"
+              :class="[
+                isScrolled
+                  ? 'text-base-content'
+                  : 'text-base-100 dark:text-base-content  ',
+              ]"
+            >
               <RouterLink
                 :to="`/${item.path}`"
                 class="btn btn-ghost uppercase px-3"
                 >{{ $t(item.i18nKey) }}</RouterLink
               >
+              <ul
+                class="absolute top-14 list-none border rounded-(--radius-box) overflow-hidden shadow-xl"
+                :class="[
+                  isScrolled
+                    ? 'bg-base-100 text-base-content border-base-300'
+                    : 'bg-neutral/60 text-base-100 border-base-300/50 dark:bg-base-100',
+                ]"
+                v-if="item.children && isSubNavOpend[index]"
+              >
+                <li
+                  v-for="subitem in item.children"
+                  :key="subitem"
+                  class="not-last:border-b"
+                  :class="[
+                    isScrolled
+                      ? 'border-base-300'
+                      : 'border-base-300/50 dark:*:text-base-content  ',
+                  ]"
+                >
+                  <RouterLink
+                    :to="`/${subitem.path}`"
+                    class="justify-start w-full btn btn-ghost border-none rounded-none uppercase"
+                    >{{ $t(subitem.i18nKey) }}</RouterLink
+                  >
+                </li>
+              </ul>
             </li>
           </ul>
-          <div class="text-xl flex *:p-2">
+          <div class="text-xl flex items-center *:p-2">
             <div><IconUseDark /></div>
             <div>
-              <IconLanguages />
+              <!-- <IconLanguages /> -->
+              <SwitchButton :is-scrolled="isScrolled" />
             </div>
             <!-- <div class="flex">
               <button
@@ -46,13 +85,16 @@
           </div>
         </div>
         <div class="xl:hidden flex items-center">
-          <div class="text-xl flex *:px-2 *:py-2 mr-2">
+          <div class="text-xl flex items-center *:p-2 md:mr-2">
             <div><IconUseDark /></div>
-            <div @click="toggleLocale"><IconLanguages /></div>
+            <div>
+              <SwitchButton :is-scrolled="isScrolled" />
+              <!-- <IconLanguages /> -->
+            </div>
           </div>
           <button
             @click="toggleMobileMenu"
-            class="btn btn-ghost btn-tighter mr-4"
+            class="btn btn-ghost btn-tighter md:mr-4"
             :class="{ 'btn-active': isMobileMenuOpen }"
           >
             <svg
@@ -86,7 +128,7 @@
       class="w-full border-y border-base-300 bg-base-100 xl:hidden"
     >
       <ul class="menu menu-vertical w-full list-none">
-        <li v-for="item in menu" :key="item.name">
+        <li v-for="item in menu" :key="item.i18nKey">
           <RouterLink
             :to="`/${item.path}`"
             class="w-full btn btn-ghost rounded-none text-base-content"
@@ -95,6 +137,18 @@
               $t(item.i18nKey)
             }}</span></RouterLink
           >
+          <ul class="menu menu-vertical w-full list-none">
+            <li v-for="subitem in item.children" :key="subitem.i18nKey">
+              <RouterLink
+                :to="`/${subitem.path}`"
+                class="w-full btn btn-ghost rounded-none text-base-content"
+                @click="closeMobileMenu"
+                ><span class="container mx-auto text-left">{{
+                  $t(subitem.i18nKey)
+                }}</span></RouterLink
+              >
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -106,20 +160,35 @@ import Logo from '@/components/images/logo.vue';
 // import { preLoadCommonModules } from '@/i18n';
 import { onMounted, onUnmounted, ref } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
+import SwitchButton from './switchButton.vue';
 
 const route = useRoute();
 const menu = ref([
   {
     i18nKey: 'nav.aboutUs',
     path: 'about-us',
+    children: [
+      {
+        i18nKey: 'nav.milestone',
+        path: 'milestone',
+      },
+      {
+        i18nKey: 'nav.corporateInformation',
+        path: 'corporate-information',
+      },
+    ],
   },
+  // {
+  //   i18nKey: 'nav.milestone',
+  //   path: 'milestone',
+  // },
+  // {
+  //   i18nKey: 'nav.corporateInformation',
+  //   path: 'corporate-information',
+  // },
   {
-    i18nKey: 'nav.milestone',
-    path: 'milestone',
-  },
-  {
-    i18nKey: 'nav.corporateInformation',
-    path: 'corporate-information',
+    i18nKey: 'nav.ourFocus',
+    path: 'our-focus',
   },
   {
     i18nKey: 'nav.ourBusinesses',
@@ -136,6 +205,7 @@ const menu = ref([
 ]);
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
+const isSubNavOpend = ref(new Array(menu.value.length).fill(false));
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
@@ -166,6 +236,15 @@ const handleClickOutside = (event) => {
   if (isMobileMenuOpen.value && !event.target.closest('.navbar')) {
     closeMobileMenu();
   }
+};
+
+const openSubnav = (index) => {
+  isSubNavOpend.value = isSubNavOpend.value.map(() => false);
+  isSubNavOpend.value[index] = true;
+};
+
+const closeSubnav = () => {
+  isSubNavOpend.value = isSubNavOpend.value.map(() => false);
 };
 
 onMounted(() => {
