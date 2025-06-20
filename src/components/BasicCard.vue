@@ -5,7 +5,7 @@
       :class="iconColor"
       class="opacity-10 absolute -top-12 -left-12 text-8xl origin-top-left stroke-1 transition-opacity duration-300"
     />
-    <div class="space-y-4 relative">
+    <div class="space-y-4 relative h-full flex flex-col justify-between">
       <div class="*:transition-all *:duration-300 *:ease-in-out">
         <h4 class="text-neutral-300 uppercase pb-4">
           <slot name="title">title</slot>
@@ -14,9 +14,11 @@
           <slot name="content">content</slot>
         </p>
       </div>
-      <RouterLink :to="to" class="mt-6 btn btn-outline btn-arrow darkbg">{{
-        text
-      }}</RouterLink>
+      <RouterLink
+        :to="to"
+        class="mt-6 w-fit btn btn-outline btn-arrow darkbg"
+        >{{ text }}</RouterLink
+      >
     </div>
   </div>
 </template>
