@@ -29,56 +29,60 @@
             <template #title>{{ $rt(profile.name) }}</template>
             <template #subtitle>{{ $rt(profile.identity) }}</template>
           </ProfileBlock> -->
-          <table
-            class="col-full border border-base-300 text-lg text-base-content wow animate__slideInUp"
+          <div
+            class="col-full min-w-40 overflow-x-auto border border-base-300 rounded-(--radius-box)"
           >
-            <thead class="bg-base-200 font-semibold">
-              <tr class="*:p-4 *:w-1/4">
-                <td>
-                  {{
-                    $t(
-                      'corporateInformation.sections.boardOfDirectors.membersTitle.title',
-                    )
-                  }}
-                </td>
-                <td>
-                  {{
-                    $t(
-                      'corporateInformation.sections.boardOfDirectors.membersTitle.name',
-                    )
-                  }}
-                </td>
-                <td>
-                  {{
-                    $t(
-                      'corporateInformation.sections.boardOfDirectors.membersTitle.gender',
-                    )
-                  }}
-                </td>
-                <td>
-                  {{
-                    $t(
-                      'corporateInformation.sections.boardOfDirectors.membersTitle.appointed',
-                    )
-                  }}
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="profile in $tm(
-                  'corporateInformation.sections.boardOfDirectors.members',
-                )"
-                :key="$rt(profile.name)"
-                class="text-base-content/80 *:p-4"
-              >
-                <td>{{ $rt(profile.identity) }}</td>
-                <td>{{ $rt(profile.name) }}</td>
-                <td>{{ $rt(profile.gender) }}</td>
-                <td>{{ $rt(profile.appointed) }}</td>
-              </tr>
-            </tbody>
-          </table>
+            <table
+              class="w-full text-lg text-base-content wow animate__slideInUp"
+            >
+              <thead class="bg-base-200 font-semibold">
+                <tr class="*:p-4 *:w-1/4">
+                  <td>
+                    {{
+                      $t(
+                        'corporateInformation.sections.boardOfDirectors.membersTitle.title',
+                      )
+                    }}
+                  </td>
+                  <td>
+                    {{
+                      $t(
+                        'corporateInformation.sections.boardOfDirectors.membersTitle.name',
+                      )
+                    }}
+                  </td>
+                  <td>
+                    {{
+                      $t(
+                        'corporateInformation.sections.boardOfDirectors.membersTitle.gender',
+                      )
+                    }}
+                  </td>
+                  <td>
+                    {{
+                      $t(
+                        'corporateInformation.sections.boardOfDirectors.membersTitle.appointed',
+                      )
+                    }}
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="profile in $tm(
+                    'corporateInformation.sections.boardOfDirectors.members',
+                  )"
+                  :key="$rt(profile.name)"
+                  class="text-base-content/80 *:p-4"
+                >
+                  <td>{{ $rt(profile.identity) }}</td>
+                  <td>{{ $rt(profile.name) }}</td>
+                  <td>{{ $rt(profile.gender) }}</td>
+                  <td>{{ $rt(profile.appointed) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
       <section class="md:bg-base-200 wow animate__slideInUp">

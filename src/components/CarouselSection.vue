@@ -185,7 +185,7 @@
               {{ $t('homepage.carousel.infoCards.corporate.content') }}
             </p>
             <RouterLink
-              to="/corporate-information"
+              to="/our-focus"
               class="btn btn-neutral btn-wide w-fit"
               >{{ $t('homepage.carousel.infoCards.corporate.cta') }}</RouterLink
             >
