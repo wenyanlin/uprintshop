@@ -50,13 +50,13 @@ export default {
         corporate: {
           title: 'Corporate Info',
           content:
-            '25 years of expertise building comprehensive printing solutions from design to finishing.',
+            "Harnessing digital integration to consolidate manufacturing capacity, enable agile production, and reshape the industry's advanced productivity ecosystem.",
           cta: 'Learn More',
         },
         group: {
           title: 'Our Businesses',
           content:
-            '25 years of expertise building comprehensive printing solutions from design to finishing.',
+            'Dedicated to providing superior printing and ancillary services to our clients with optimal timeliness and cost efficiency.',
           cta: 'Learn More',
         },
       },
@@ -274,14 +274,14 @@ export default {
       featuredBlock: {
         title: 'Customer First',
         content:
-          "Group companies serve xxx customers globally each year. Each member company operates autonomously under the group's strategic framework, gaining deep insights into target markets and precisely understanding customer needs. Through flexible and efficient management models, we ensure rapid response to market changes while maintaining high execution capabilities and entrepreneurial spirit.",
+          "Our group companies serve over 10,000 domestic and global clients annually. Each member enterprise operates autonomously within the group's strategic framework, maintaining deep market insights and precisely capturing customer requirements. Through our agile and efficient management model, we ensure rapid market responsiveness while sustaining high execution capabilities and entrepreneurial spirit.",
       },
     },
     brands: {
       '123print': {
         title: 'Universe Printing',
         content:
-          'Universe Printing Group has been developing since 2001, evolving from simple film output to comprehensive one-stop printing services. We have invested in digital technology and self-service platforms, operating over twenty retail stores across Hong Kong. Combining traditional and digital printing, we provide full-service solutions covering design, production, and sales, committed to expanding into global markets.',
+          'Established in 2001, Global Printing Group has transformed from simple film output to full-service printing solutions. By investing in digital technology, self-service platforms, and retail networks, we combine traditional and digital printing to provide comprehensive design, production, and sales services while actively pursuing global market expansion.',
       },
       printshop: {
         title: 'Print Shop',
@@ -382,6 +382,14 @@ export default {
           'Flat D, 8/F, Southeast Industrial Building, 611-619 Castle Peak, TsuenWan, New Territories, HongKong.',
         telephone: '3565 4707',
         fax: '3914 9127',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d274.22265072063095!2d114.10337293192829!3d22.373047616453043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8e4926c455d%3A0x767f9e2689b8c21!2z5p2x5Y2X5bel5qWt5aSn5buI!5e0!3m2!1sen!2sus!4v1748419945532!5m2!1sen-US!2sus',
+      },
+      location2: {
+        subTitle: '',
+        title: 'Printshop Printing Technology(Shenzhen)Co.,LTD',
+        address:
+          'No. 2304E-2326, Block B, Phase I, Qianhai Economic Trade Center, Nanshan Street, Qianhai Shenzhen-Hong Kong Cooperation Zone, Shenzhen',
+        map: 'https://maps.google.com/maps?q=22.50,113.89+(深圳前海經貿中心一期B座)&hl=eng&z=16&output=embed',
       },
       integrityAndAccountability: {
         title: 'Integrity and Accountability',

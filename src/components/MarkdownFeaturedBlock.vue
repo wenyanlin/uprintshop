@@ -29,7 +29,6 @@ const props = defineProps({
 });
 
 const parsedContent = computed(() => {
-  console.log(props.markdownContent);
   return DOMPurify.sanitize(parseMarkdown(props.markdownContent));
 });
 </script>

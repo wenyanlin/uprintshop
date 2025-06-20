@@ -23,7 +23,7 @@
             }}</template>
           </BasicCard>
           <BasicCard
-            to="/corporate-information"
+            to="/our-focus"
             :text="$t('homepage.carousel.infoCards.corporate.cta')"
             icon="IconBuilding"
             icon-color="text-neutral-100"
