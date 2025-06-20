@@ -87,7 +87,7 @@ export default {
         },
       },
       ourBusinesses: {
-        label: '集團業務',
+        label: '我們的業務',
         title: '立足香港 服務全球\n專業印刷解決方案遍及大中華及海外市場',
         cta: '了解更多',
         businesses: [
@@ -255,7 +255,7 @@ export default {
   },
   ourBusinesses: {
     subTitle: 'Our Businesses',
-    title: '集團業務',
+    title: '我們的業務',
     sections: {
       featuredBlock: {
         title: '客戶至上',
