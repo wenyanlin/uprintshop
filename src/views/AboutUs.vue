@@ -16,8 +16,9 @@
             <MarkdownFeaturedBlock
               :markdown-content="$t('aboutUs.sections.commitment.content')"
               content-position="left"
-              to="/"
-              :text="$t('aboutUs.sections.commitment.linkText')"
+              to=""
+              text=""
+              background-image="/images/about-us/commitment__background.png"
             >
               <template #title>{{
                 $t('aboutUs.sections.commitment.title')
@@ -32,9 +33,9 @@
             <MarkdownFeaturedBlock
               :markdown-content="$t('aboutUs.sections.longTermValue.content')"
               content-position="right"
-              to="/"
-              :text="$t('aboutUs.sections.longTermValue.linkText')"
-              background-image="/images/bg-2.png"
+              to=""
+              text=""
+              background-image="/images/about-us/longTermValue__background.jpg"
             >
               <template #title>{{
                 $t('aboutUs.sections.longTermValue.title')
@@ -43,10 +44,10 @@
           </div>
         </div>
       </section>
-      <section class="flex flex-col wow animate__slideInUp">
+      <section class="flex flex-col">
         <div class="grid-responsive px-4 lg:px-0">
           <div class="col-full text-center">
-            <h2 class="lg:mt-32 mb-8 lg:mb-16">
+            <h2 class="lg:mt-32 mb-8 lg:mb-16 wow animate__slideInUp">
               <i18n-t keypath="aboutUs.sections.transformation.title">
                 <template #highlight>
                   <span
@@ -98,7 +99,7 @@
         </ComparisonBlock>
       </section>
     </div>
-    <ContactSection class="wow animate__slideInUp"></ContactSection>
+    <ContactSection></ContactSection>
   </div>
 </template>
 

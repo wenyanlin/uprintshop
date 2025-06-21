@@ -131,37 +131,24 @@
           </div>
         </div>
       </section>
-      <section
-        class="home__investor-relations bg-[url(/images/bg-6.jpg)] bg-top bg-cover"
+      <FeaturedCenterSection
+        :markdown-content="$t('homepage.sections.introduction.content')"
+        background-image="/images/bg-6.jpg"
       >
-        <div class="grid-responsive py-24 lg:py-48">
-          <div
-            class="col-span-4 p-8 bg-base-100/80 backdrop-blur sm:rounded-(--radius-box) md:m-0 md:p-16 md:col-span-8 lg:col-start-3 wow animate__slideInUp"
-          >
-            <h3 class="pb-4">
-              {{ $t('homepage.sections.introduction.title') }}
-            </h3>
-            <div
-              class="text-base-content/80 *:text-base-content/80"
-              v-html="
-                DOMPurify.sanitize(
-                  parseMarkdown($t('homepage.sections.introduction.content')),
-                )
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
+        <template #title>{{
+          $t('homepage.sections.introduction.title')
+        }}</template></FeaturedCenterSection
+      >
     </div>
     <ContactSection class="wow animate__slideInUp"></ContactSection>
   </div>
 </template>
 
 <script setup>
-import DOMPurify from 'dompurify';
 import { useI18n } from 'vue-i18n';
 import CarouselSection from '../components/CarouselSection.vue';
 import ContactSection from '../components/ContactSection.vue';
+import FeaturedCenterSection from '../components/FeaturedCenterSection.vue';
 import FeaturedSection from '../components/FeaturedSection.vue';
 import { parseMarkdown } from '../utils/markdown.js';
 

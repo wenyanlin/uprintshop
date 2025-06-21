@@ -15,7 +15,7 @@
               content-position="left"
               to="/"
               text=""
-              background-image="/images/bg-3.png"
+              background-image="/images/our-businesses/featuredBlock__background.png"
             >
               <template #title>{{
                 $t('ourBusinesses.sections.featuredBlock.title')
@@ -29,10 +29,11 @@
           <InfoBlock
             :to="brand.url"
             :src="brand.imagePath"
-            v-for="brand in brands"
+            v-for="(brand, index) in brands"
             :key="brand.title"
             class="col-span-4 relative duration-150 our-businesses__brand wow animate__slideInUp"
             :class="{ disabled: !brand.url }"
+            :data-wow-delay="`${0.1 * index}s`"
           >
             <template #title>{{ $t(brand.title) }}</template>
             <template #content>{{ $t(brand.content) }}</template>
@@ -40,7 +41,7 @@
         </div>
       </section>
     </div>
-    <ContactSection class="wow animate__slideInUp"></ContactSection>
+    <ContactSection></ContactSection>
   </div>
 </template>
 

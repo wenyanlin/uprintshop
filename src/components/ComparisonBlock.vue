@@ -1,32 +1,44 @@
 <template>
   <div class="comparison-block w-full">
-    <div class="comparison-block__block block-top bg-base-200">
-      <p class="text-base-content/50 *:text-base-content/50 text-lg lg:text-xl">
+    <div
+      class="comparison-block__block block-top bg-base-200 wow animate__fadeIn"
+    >
+      <p
+        class="text-base-content/50 *:text-base-content/50 text-lg lg:text-xl wow animate__slideInUp"
+      >
         <slot name="tt">tt</slot>
       </p>
       <p
-        class="text-base-content *:text-base-content font-medium text-xl lg:text-2xl"
+        class="text-base-content *:text-base-content font-medium text-xl lg:text-2xl wow animate__slideInUp"
       >
         <slot name="tb">tb</slot>
       </p>
     </div>
-    <div class="comparison-block__block block-bottom bg-base-300">
-      <p class="text-base-content/50 *:text-base-content/50 text-lg lg:text-xl">
+    <div
+      class="comparison-block__block block-bottom bg-base-300 wow animate__fadeIn"
+    >
+      <p
+        class="text-base-content/50 *:text-base-content/50 text-lg lg:text-xl wow animate__slideInUp"
+      >
         <slot name="bt">bt</slot>
       </p>
       <p
-        class="text-base-content *:text-base-content font-medium text-xl lg:text-2xl"
+        class="text-base-content *:text-base-content font-medium text-xl lg:text-2xl wow animate__slideInUp"
       >
         <slot name="bb">bb</slot>
       </p>
     </div>
     <div
-      class="comparison-block__block block-right bg-base-content dark:bg-base-content/80"
+      class="comparison-block__block block-right bg-base-content dark:bg-base-content/80 wow animate__fadeIn"
     >
-      <p class="text-base-100/80 *:text-base-100/80 text-lg lg:text-xl">
+      <p
+        class="text-base-100/80 *:text-base-100/80 text-lg lg:text-xl wow animate__slideInUp"
+      >
         <slot name="rt">rt</slot>
       </p>
-      <p class="text-base-100 *:text-base-100 font-medium text-xl lg:text-2xl">
+      <p
+        class="text-base-100 *:text-base-100 font-medium text-xl lg:text-2xl wow animate__slideInUp"
+      >
         <slot name="rb">rb</slot>
       </p>
     </div>
@@ -37,10 +49,10 @@
 
 <style lang="scss" scoped>
 .comparison-block {
-  transform: skewY(0deg);
+  // transform: skewY(0deg);
 
   @media (min-width: 1024px) {
-    transform: skewY(-1deg);
+    // transform: skewY(-1deg);
     display: grid;
     grid-template:
       'top right' 1fr

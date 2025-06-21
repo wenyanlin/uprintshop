@@ -13,13 +13,17 @@
       class="lg:w-6/12 p-8 lg:p-16 bg-base-100 lg:bg-base-100/90"
       :class="contentPosition"
     >
-      <h4 class="pb-4"><slot name="title">title</slot></h4>
-      <div class="text-base-content/80 **:text-base-content/80">
+      <h4 class="pb-4 wow animate__fadeInUp">
+        <slot name="title">title</slot>
+      </h4>
+      <div
+        class="text-base-content/80 **:text-base-content/80 wow animate__fadeInUp"
+      >
         <slot name="content"> content </slot>
       </div>
       <RouterLink
         :to="to || ''"
-        class="mt-8 btn btn-neutral btn-wide"
+        class="mt-8 btn btn-neutral btn-wide wow animate__fadeInUp"
         v-if="text"
         >{{ text }}</RouterLink
       >

@@ -1,16 +1,21 @@
 <template>
-  <section class="contact-block">
+  <section class="contact-section wow animate__fadeIn">
     <div class="grid-responsive py-16 md:py-32 lg:py-64">
       <div class="col-full text-center">
         <div class="mb-16 *:transition-all *:duration-300 *:ease-in-out">
-          <h4 class="w-full text-base-content/50 pb-2 font-normal">
+          <h4
+            class="w-full text-base-content/50 pb-2 font-normal wow animate__slideInUp"
+          >
             {{ t('subTitle') }}
           </h4>
-          <h2>{{ t('title') }}</h2>
+          <h2 class="wow animate__slideInUp" data-wow-delay="0.1s">
+            {{ t('title') }}
+          </h2>
         </div>
         <RouterLink
           to="/contact-us"
-          class="btn btn-primary btn-arrow btn-wide"
+          class="btn btn-primary btn-arrow btn-wide wow animate__slideInUp"
+          data-wow-delay="0.2s"
           >{{ t('button') }}</RouterLink
         >
       </div>
@@ -39,7 +44,7 @@ const { t } = useI18n({
 </script>
 
 <style lang="scss" scoped>
-.contact-block {
+.contact-section {
   &::before {
     content: '';
     position: absolute;

@@ -11,7 +11,7 @@
             <MarkdownFeaturedBlock
               :markdown-content="$t('milestone.sections.featuredBlock.content')"
               content-position="left"
-              background-image="/images/bg-3.png"
+              background-image="/images/milestone/featuredBlock.jpg"
             >
               <template #title>{{
                 $t('milestone.sections.featuredBlock.title')
@@ -63,7 +63,7 @@
         </div>
       </section>
     </div>
-    <ContactSection class="wow animate__slideInUp"></ContactSection>
+    <ContactSection></ContactSection>
   </div>
 </template>
 
