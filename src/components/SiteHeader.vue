@@ -160,7 +160,7 @@ import Logo from '@/components/images/logo.vue';
 // import { preLoadCommonModules } from '@/i18n';
 import { onMounted, onUnmounted, ref } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
-import SwitchButton from './switchButton.vue';
+import SwitchButton from './SwitchButton.vue';
 
 const route = useRoute();
 const menu = ref([

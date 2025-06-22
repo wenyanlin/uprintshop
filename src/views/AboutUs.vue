@@ -19,6 +19,7 @@
               to=""
               text=""
               background-image="/images/about-us/commitment__background.png"
+              imageData=""
             >
               <template #title>{{
                 $t('aboutUs.sections.commitment.title')

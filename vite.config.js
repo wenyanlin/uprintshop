@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'; // 引入 fileURLToPath
 // import Components from 'unplugin-vue-components/vite';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import { defineConfig } from 'vite';
+import { imagetools } from 'vite-imagetools';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,6 +28,7 @@ export default defineConfig({
     VueI18nPlugin({
       include: path.resolve(__dirname, './src/locales/**'),
     }),
+    imagetools(),
     // Components({
     //   resolvers: [ElementPlusResolver()],
     // }),

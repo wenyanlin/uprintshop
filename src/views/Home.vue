@@ -1,6 +1,6 @@
 <template>
   <div class="home overflow-hidden">
-    <CarouselSection class="min-h-screen" />
+    <CarouselSection />
     <div class="flex flex-col items-end">
       <FeaturedSection></FeaturedSection>
       <section
@@ -133,7 +133,7 @@
       </section>
       <FeaturedCenterSection
         :markdown-content="$t('homepage.sections.introduction.content')"
-        background-image="/images/bg-6.jpg"
+        :image-data="imageFeaturedCenterSection"
       >
         <template #title>{{
           $t('homepage.sections.introduction.title')
@@ -145,6 +145,7 @@
 </template>
 
 <script setup>
+import imageFeaturedCenterSection from '@/assets/images/home/featured-center-section.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
 import { useI18n } from 'vue-i18n';
 import CarouselSection from '../components/CarouselSection.vue';
 import ContactSection from '../components/ContactSection.vue';

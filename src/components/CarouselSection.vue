@@ -61,11 +61,31 @@
       :class="[{ active: currentIndex === index }]"
       class="carousel-image absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center -z-10"
     >
-      <img
-        :src="slide.image"
+      <!-- <img
+        :src="slide.imageSrc"
         :alt="$t(`homepage.carousel.slides.${index}.alt`)"
         class="w-full h-full object-cover brightness-50"
-      />
+      /> -->
+      <picture>
+        <source
+          :srcset="slide.imageData.sources.avif"
+          type="image/avif"
+          sizes="100vw"
+        />
+        <source
+          :srcset="slide.imageData.sources.webp"
+          type="image/webp"
+          sizes="100vw"
+        />
+        <img
+          :srcset="slide.imageData.sources.jpg"
+          :src="slide.imageData.img.src"
+          sizes="100vw"
+          class="min-w-screen h-screen object-cover brightness-50"
+          alt="..."
+          loading="lazy"
+        />
+      </picture>
     </div>
 
     <div
@@ -210,6 +230,9 @@
 </template>
 
 <script setup>
+import image1Data from '@/assets/images/carousel/01.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
+import image2Data from '@/assets/images/carousel/02.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
+import image3Data from '@/assets/images/carousel/03.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
 import { onMounted, onUnmounted } from 'vue';
 import { RouterLink } from 'vue-router';
 import BasicCard from './BasicCard.vue';
@@ -217,7 +240,8 @@ import BasicCard from './BasicCard.vue';
 const slides = ref([
   {
     id: 1,
-    image: '/images/carousel/01.jpg',
+    imageSrc: '/images/carousel/01.jpg',
+    imageData: image1Data,
     // alt: '輪播圖',
     // title: '重新定義可能',
     // lightTitle: '成就非凡印象',
@@ -228,7 +252,8 @@ const slides = ref([
   },
   {
     id: 2,
-    image: '/images/carousel/02.jpg',
+    imageSrc: '/images/carousel/02.jpg',
+    imageData: image2Data,
     // alt: '輪播圖',
     // title: '突破傳統思維',
     // lightTitle: '開創嶄新格局',
@@ -239,7 +264,8 @@ const slides = ref([
   },
   {
     id: 3,
-    image: '/images/carousel/03.jpg',
+    imageSrc: '/images/carousel/03.jpg',
+    imageData: image3Data,
     // alt: '輪播圖',
     // title: '改寫遊戲規則',
     // lightTitle: '帶來深刻改變',

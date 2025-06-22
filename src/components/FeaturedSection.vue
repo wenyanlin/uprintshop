@@ -25,11 +25,31 @@
     <div
       class="max-h-128 bg-accent xl:w-[calc(50vw+34.5rem)] 2xl:w-[calc(50vw+42.5rem)] overflow-hidden xl:rounded-l-(--radius-box) wow animate__slideInUp"
     >
-      <img
+      <!-- <img
         src="/images/bg-5.jpg"
         alt=""
         class="w-full object-cover transition-transform duration-300 ease-in-out"
-      />
+      /> -->
+      <picture>
+        <source
+          :srcset="imageFeaturedSection.sources.avif"
+          type="image/avif"
+          sizes="100%"
+        />
+        <source
+          :srcset="imageFeaturedSection.sources.webp"
+          type="image/webp"
+          sizes="100%"
+        />
+        <img
+          :srcset="imageFeaturedSection.sources.jpg"
+          :src="imageFeaturedSection.img.src"
+          size="100%"
+          alt="featured-section"
+          class="w-full object-cover transition-transform duration-300 ease-in-out"
+          loading="lazy"
+        />
+      </picture>
     </div>
     <div class="grid-responsive wow animate__slideInUp">
       <div
@@ -116,6 +136,7 @@
 </template>
 
 <script setup>
+import imageFeaturedSection from '@/assets/images/home/featured-section.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
 import { RouterLink } from 'vue-router';
 import AnimatedCounter from './AnimatedCounter.vue';
 import IconBuilding from './icons/IconBuilding.vue';

@@ -92,7 +92,7 @@
       </section> -->
       <FeaturedCenterSection
         :markdown-content="$t('ourFocus.sections.professionalPartners.content')"
-        background-image="/images/our-focus/professionalPartners__background.jpg"
+        :image-data="imageFeaturedCenterSection"
       >
         <template #title>{{
           $t('ourFocus.sections.professionalPartners.title')
@@ -104,6 +104,7 @@
 </template>
 
 <script setup>
+import imageFeaturedCenterSection from '@/assets/images/our-focus/whatIs__background.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
 import DOMPurify from 'dompurify';
 import { useI18n } from 'vue-i18n';
 import ContactSection from '../components/ContactSection.vue';
