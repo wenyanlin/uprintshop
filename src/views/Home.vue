@@ -158,11 +158,11 @@ const { tm, rt } = useI18n();
 const ourBusiness = [
   {
     url: 'https://www.123print.com.hk/',
-    src: '/images/logo__123print.png',
+    src: '/images/our-businesses/logo__123print.png',
   },
   {
     url: 'https://www.printshop.hk/',
-    src: '/images/logo__print-shop.png',
+    src: '/images/our-businesses/logo__print-shop.png',
   },
 ];
 
