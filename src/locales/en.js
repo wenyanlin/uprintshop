@@ -202,15 +202,14 @@ export default {
         linkText: 'Learn More',
       },
       benefits: {
-        title: 'Who Benefits?',
+        title: 'Who Can Benefit?',
         content:
-          'Businesses seeking to eliminate minimum order constraints, achieve faster delivery than traditional manufacturing, while gaining richer product options, better value, and consistent quality.',
-        linkText: 'Learn More',
+          'Those seeking to **eliminate minimum order quantity** constraints, achieve faster delivery than traditional manufacturing, while enjoying a broader product selection, **superior cost-effectiveness**, and **more consistent quality**.',
       },
       professionalPartners: {
         title: 'Professional Empowerment Partners',
         content:
-          'We invest in developing and integrating the most advanced industry-related software, establishing professional prepress document processing centers. This enables our production resource partners to avoid duplicate investments, reduce related fixed personnel and resource commitments, while significantly improving production efficiency and ensuring better quality assurance.',
+          "We invest in developing and integrating the industry's most advanced software solutions, establishing a professional pre-press document processing center. This enables our production **partners to avoid redundant investments and reduce fixed personnel and resource commitments**, significantly enhancing production efficiency while ensuring superior quality assurance.",
       },
     },
   },
@@ -294,6 +293,10 @@ export default {
         content:
           'Founded in Hong Kong in 2005, Print Shop Limited operates through proprietary online self-service platforms and physical retail stores to provide diversified printing services, including offset, inkjet, and digital printing. Our product range spans from stationery and promotional materials to packaging boxes, complemented by thoughtful services such as photocopying, short-run printing, and 24-hour express printing.',
       },
+      photo520: {
+        title: 'Photo 520',
+        content: '-',
+      },
     },
   },
   corporateInformation: {
@@ -307,62 +310,61 @@ export default {
           title: 'Title',
           name: 'Name',
           gender: 'Gender',
-          appointed: 'Date of Appointment',
         },
         members: [
           {
-            name: 'Lam Shing Tai',
+            name: '林承大',
+            engName: 'Lam Shing Tai',
             identity: 'Chairman and Chief Executive Officer',
-            gender: 'Male',
-            appointed: '2023-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'Li Shuang',
+            name: '李爽',
+            engName: 'Li Shuang',
             identity: 'Executive Director',
-            gender: 'Female',
-            appointed: '2023-07-01',
+            gender: 'gender.female',
           },
           {
-            name: 'Kao Jung',
+            name: '高榮',
+            engName: 'Kao Jung',
             identity: 'Executive Director',
-            gender: 'Male',
-            appointed: '2023-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'Yip Chi Man',
+            name: '葉子民',
+            engName: 'Yip Chi Man',
             identity: 'Executive Director',
-            gender: 'Male',
-            appointed: '2023-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'Li Zhen wu',
+            name: '李振武',
+            engName: 'Li Zhen wu',
             identity: 'Executive Director',
-            gender: 'Male',
-            appointed: '2024-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'Wong Chun Kwok',
+            name: '黃振國',
+            engName: 'Wong Chun Kwok',
             identity: 'Independent Non-Executive Director',
-            gender: 'Male',
-            appointed: '2022-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'Ho Kar Ming',
+            name: '何嘉明',
+            engName: 'Ho Kar Ming',
             identity: 'Independent Non-Executive Director',
-            gender: 'Male',
-            appointed: '2022-07-01',
+            gender: 'gender.male',
           },
           {
-            name: 'So Shuk Wan',
+            name: '蘇淑韻',
+            engName: 'So Shuk Wan',
             identity: 'Independent Non-Executive Director',
-            gender: 'Female',
-            appointed: '2022-07-01',
+            gender: 'gender.female',
           },
           {
-            name: 'So Hang Fung',
+            name: '蘇恒峯',
+            engName: 'So Hang Fung',
             identity: 'Company Secretary and Certified Public Accountant',
-            gender: 'Male',
-            appointed: '2021-02-09',
+            gender: 'gender.male',
           },
         ],
       },
@@ -389,16 +391,17 @@ export default {
     subTitle: '',
     title: 'Investor Information',
     nav: [
-      { name: 'Announcements and Circulars' },
+      { name: 'Announcements and Circulars', abbreviation: 'Announcements' },
       {
         name: 'Listing Documents',
+        abbreviation: 'Listing Docs',
         content:
           'The offer of securities of the Company is made solely on the information provided in the prospectus',
       },
-      { name: 'Financial Reports' },
-      { name: 'Corporate Governance' },
-      { name: 'Monthly Returns' },
-      { name: 'Documents on Display' },
+      { name: 'Financial Reports', abbreviation: 'Financials' },
+      { name: 'Corporate Governance', abbreviation: 'Corp. Gov. ' },
+      { name: 'Monthly Returns', abbreviation: 'Monthly Returns' },
+      { name: 'Documents on Display', abbreviation: 'Documents on Display' },
     ],
   },
   contactUs: {
@@ -426,5 +429,97 @@ export default {
         content: `At Universe Printshop Holdings Limited, we are committed to operating with the utmost integrity and accountability. It is important that all employees and stakeholders feel empowered to speak up if they witness any unethical or illegal behavior.\n\nIf you have a genuine concern about misconduct or potential wrongdoing within our company, please contact us using the following confidential channels:：[whistleblowing{'@'}123print.com.hk](mailto:whistleblowing{'@'}123print.com.hk)`,
       },
     },
+  },
+  privacySecurity: {
+    subTitle: '',
+    title: 'Privacy Policy',
+    content: `The following is the Privacy Policy of Universe Printing Holdings Limited ("the Company"), established in accordance with the Personal Data (Privacy) Ordinance (Chapter 486 of the Laws of Hong Kong).
+
+1.  ##### Purpose of Collecting Personal Data
+    The Company collects personal data to facilitate customers' use of our services and/or the opening of customer accounts at our Group's retail stores and/or online self-service platforms ([www.printshop.hk](https://www.printshop.hk) and [www.123print.com.hk](https://www.123print.com.hk)). This data is used to identify, retrieve, process, and follow up on customer orders and to respond to customer inquiries, enabling us to provide services tailored to customer needs. The specific purposes for using your personally identifiable information are detailed in the Personal Information Collection Statement below.
+
+2.  ##### Collection Principles
+    To safeguard your personal data privacy rights, the Company ensures that its policies and practices regarding the collection, use, retention, transfer, and access of personal data comply with the requirements of the Personal Data (Privacy) Ordinance (Chapter 486 of the Laws of Hong Kong).
+
+3.  ##### Collection of Personally Identifiable Information
+    From time to time, you may be required to provide personally identifiable information, including but not limited to your name, identity document number, telephone number, fax number, residential address, email address, credit card number and expiration date, business registration number, IP address, browsing/visit history, login name and details, and other information relevant or helpful to the services provided by the Company. Refusal to provide such information may prevent us from providing services to you. If you are under the age of eighteen, you must obtain the consent of a parent or guardian before providing any personally identifiable information to the Company.
+
+4.  ##### Direct Marketing
+    Once you provide your personally identifiable information to the Company, you may occasionally receive promotional calls, emails, or direct mail from the Company or our Group. If you do not wish to receive such information, please write to our Privacy Officer with your name, account number, and contact telephone number. The Company may ask you to indicate your preference before you register for any of our paid services.
+    > **Print Shop Limited**
+    > Unit D, 8/F, Southeast Industrial Building, 611-619 Castle Peak Road, Tsuen Wan, New Territories, Hong Kong
+    > Telephone: (852) 3678 3333
+    > Fax: (852) 3914 9127
+    > Email: cs{'@'}uprintshop.com
+    > Attention: Privacy Officer
+
+5.  ##### Data Retention
+    When you conduct business with the Company, we will retain records of all your transactions for auditing purposes. Our general policy is to retain such information for a reasonable period.
+
+6.  ##### Disclosure and Transfer of Data
+    The Company may share your personal data with, or transfer it to, other companies within **our Group**, any companies in which they have an interest, and/or third-party marketing service providers or agents engaged by the foregoing.
+
+    The Company may provide your personal data to banks or credit card companies to verify your credit card account and credit status.
+
+    The Company will also disclose your personal data when required by law.
+
+    If you do not want the Company to disclose your information to any third party, please write to our Privacy Officer with your name, account number, and contact telephone number.
+
+7.  ##### Access to Personal Data
+    You may make a written request to our Privacy Officer to access your personal data. In accordance with Section 19(1) of the Personal Data (Privacy) Ordinance, the Company will comply with your request within forty days of receipt. As per Section 20(3a) of the Ordinance, the Company reserves the right to refuse your access request if you do not make it in writing or on the specified form. Under Section 28 of the Ordinance, the Company may charge a reasonable fee for processing data access requests. However, if the access is for the purpose of making reasonable corrections, the Company may waive the fee at its discretion.
+
+8.  ##### Correction of Personal Data
+    You may make a written request to our Privacy Officer to correct your personal data. In accordance with Section 19(1) of the Personal Data (Privacy) Ordinance, the Company will comply with your request within forty days of receipt. As per Section 20(3a) of the Ordinance, the Company reserves the right to refuse your correction request if you do not make it in writing or on the specified form. Under Section 28 of the Ordinance, the Company may charge a reasonable fee for processing data access requests. However, if the access is for the purpose of making reasonable corrections, the Company may waive the fee at its discretion.
+
+9.  ##### Security
+    Personal data you provide to the Company will be securely stored in our customer service system and accessible only by authorized personnel. You should be aware that the internet is not an absolutely secure medium. However, we will strive to ensure that your personal data is protected against unauthorized access, processing, or other use, and to prevent damage resulting from such unauthorized access.
+
+10. ##### Cookies
+    When you browse and use certain services on our website, we may also collect your visit data through "Cookies." Cookies are small amounts of data sent from a web server to your browser and stored on your computer's hard drive or mobile device. Data collected from Cookies is used solely for analyzing your preferences regarding our services. You may choose to refuse all Cookies, but doing so may prevent you from using some of our website's functions.
+
+    Our website contains links to other websites (not belonging to our Group) that use cookies (**"Third-Party Websites"**). The Company cannot guarantee the accuracy of the content or statements on these websites and will not be liable for any loss arising from the content or statements of such Third-Party Websites. This Privacy Policy applies only to the Company. The Company and other companies in our Group have no control over the privacy practices of Third-Party Websites. To understand their privacy policies, please refer to those websites directly.
+
+    If your browser is set to accept Cookies, you consent to our collection of your visit data through Cookies as described in this paragraph. If you do not wish to use Cookies, please disable them through your browser settings. Please check your browser's help menu to learn how to change or update your cookie settings.
+
+11. ##### Inquiries
+    Should you have any inquiries concerning our Privacy Policy, please feel free to contact our Privacy Officer. (This statement may be amended from time to time without prior notice. Please check our website regularly and review it before providing personal data.)
+
+12. ##### Personal Information Collection Statement
+    As a customer of **Universe Printing Holdings Limited**, you may need to provide your personal data ("the Personal Data") when purchasing our services and/or products ("the Services"). If the Personal Data you provide is incomplete or incorrect, we may be unable to provide or continue to provide the Services to you.
+
+    We will keep your Personal Data confidential at all times. Our policies and practices with respect to the collection, use, retention, disclosure, transfer, confidentiality, and access of Personal Data comply with the laws of Hong Kong and are set out in this Policy.
+
+    You agree that the Personal Data you provide to us may be used and retained by the Company for the following purposes and for other purposes as may be agreed between you and the Company or required by law from time to time:
+    1.  Providing the Services.
+    2.  Marketing of goods and/or services related to the Services by the Company, our agents, other companies within our Group, or our partners.
+    3.  Processing any benefits arising from or in connection with the Services.
+    4.  Analyzing, verifying, and/or checking your credit, payment, and/or status in relation to the provision of the Services.
+    5.  Processing any payment instructions, direct debit arrangements, and/or credit facilities requested by you.
+
+    Furthermore, in accordance with your agreement with us, we may disclose and transfer your Personal Data (whether in Hong Kong or overseas) to other companies within our Group and any companies in which they have an interest. We may also store such Personal Data in one or more databases held by the Company and/or other companies within our Group (which may contain other information collected by them) for the purposes mentioned above, and for promoting the goods and/or services of the Company and/or other companies within our Group. If you do not wish to receive marketing information unrelated to the Services from the Company and/or the aforementioned companies, or if you do not wish for us to disclose, transfer, or use your Personal Data for the purposes described in this paragraph, please write to our Privacy Officer at the address below, stating your name, account number, and contact telephone number.
+
+    In accordance with the Personal Data (Privacy) Ordinance, you have the right to:
+    1.  Determine whether the Company holds any of your personal data.
+    2.  Access your personal data held by the Company within a reasonable time.
+    3.  Access your personal data held by the Company in a reasonable manner.
+    4.  Request the correction of any inaccurate personal data.
+
+    In accordance with the Ordinance, we have the right to charge a reasonable fee for processing any data access request. For access to or correction of personal data, or for a copy of the personal data we hold, please write to our Privacy Officer at the following address:
+    > **Print Shop Limited**
+    > Unit D, 8/F, Southeast Industrial Building, 611-619 Castle Peak Road, Tsuen Wan, New Territories, Hong Kong
+    > Telephone: (852) 3678 3333
+    > Fax: (852) 3914 9127
+    > Email: cs{'@'}uprintshop.com
+    > Attention: Privacy Officer
+
+---
+*Note: Universe Printing Holdings Limited, Print Shop Limited, Startec Colour Separation Printing Limited, Net Printshop Limited, All In 1 Printing (Group) Limited, Universe Printshop Limited, Universe Printshop Holdings Limited, and their respective subsidiaries, holding companies, and fellow subsidiaries are collectively referred to as **"the Group"**.
+
+**Please Note: By providing any personal data to the Company, you are deemed to have read, understood, and agreed to this Privacy Policy and the other provisions herein regarding the collection, retention, and processing of your personal data by the Company. In the event of any conflict or inconsistency between this Privacy Policy and the provisions of the Personal Data (Privacy) Ordinance (Chapter 486 of the Laws of Hong Kong), the provisions of the Ordinance shall prevail.**`,
+  },
+  gender: {
+    male: 'Male',
+    female: 'Female',
+    other: 'Other',
   },
 };

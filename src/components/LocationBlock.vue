@@ -15,19 +15,23 @@
           'md:h-96': mapHeight === 'normal',
           'md:h-80': mapHeight === 'sm',
         }"
-        class="overflow-hidden w-full h-80 md:rounded-(--radius-box)"
+        class="overflow-hidden w-full h-80 md:rounded-(--radius-box) wow animate__slideInUp"
       >
         <slot name="map">#map</slot>
       </div>
     </div>
     <div class="w-full px-4 sm:px-2 md:px-0 md:w-5/12 space-y-8">
-      <div>
+      <div class="wow animate__slideInUp">
         <p class="text-primary pb-2" v-if="$slots.subtitle">
           <slot name="subtitle"></slot>
         </p>
         <h2><slot name="title">#title</slot></h2>
       </div>
-      <address itemscope itemtype="https://schema.org/Organization">
+      <address
+        itemscope
+        itemtype="https://schema.org/Organization"
+        class="wow animate__slideInUp"
+      >
         <dl class="pl-0 space-y-4 *:flex *:gap-4">
           <div v-if="$slots.address">
             <dt class="text-base-content/60 text-nowrap" v-if="hasTitle">

@@ -10,7 +10,7 @@ import InvestorRelations from '../views/InvestorRelations.vue';
 import Milestone from '../views/Milestone.vue';
 import OurBusinesses from '../views/OurBusinesses.vue';
 import OurFocus from '../views/OurFocus.vue';
-import PrivacySecurity from '../views/PrivacySecurity.vue';
+import PrivacyPolicy from '../views/PrivacyPolicy.vue';
 
 const routes = [
   {
@@ -78,9 +78,9 @@ const routes = [
     },
   },
   {
-    path: '/privacy-security',
-    name: 'PrivacySecurity',
-    component: PrivacySecurity,
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy,
     meta: {
       titleKey: 'footer.privacy',
     },

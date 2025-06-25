@@ -1,6 +1,6 @@
 <template>
   <Navigation />
-  <main class="min-h-screen">
+  <main class="min-h-dvh">
     <RouterView />
   </main>
   <SiteFooter />

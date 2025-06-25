@@ -51,7 +51,7 @@ const menu = ref([
   },
   {
     i18nKey: 'footer.privacy',
-    path: 'privacy-security',
+    path: 'privacy-policy',
   },
 ]);
 </script>

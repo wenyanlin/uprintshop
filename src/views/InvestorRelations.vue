@@ -1,18 +1,16 @@
 <template>
   <div class="investor-relations">
     <HeroSection>
-      <template #subtitle>Investor Relations</template>
-      <template #title>投資者訊息</template>
+      <template #subtitle>{{ $t('investorRelations.subTitle') }}</template>
+      <template #title>{{ $t('investorRelations.title') }}</template>
     </HeroSection>
     <div class="flex flex-col items-center">
-      <div class="grid-responsive my-16">
+      <div class="grid-responsive md:my-16">
         <nav
           aria-label="側邊導航"
-          class="z-10 bg-base-100 col-span-4 border-b border-base-300 md:border-none md:col-span-2 lg:col-span-3 h-fit sticky top-18 mb-8 wow animate__slideInUp md:mb-0 md:top-28"
+          class="z-10 bg-base-100 col-span-4 border-b border-base-300 md:border-none md:col-span-2 lg:col-span-3 h-fit md:sticky top-18 mb-8 wow animate__slideInUp md:mb-0 md:top-28"
         >
-          <ul
-            class="w-full grid grid-cols-3 list-none md:flex md:flex-col lg:w-fit"
-          >
+          <ul class="w-full list-none flex flex-col lg:w-fit">
             <li v-for="item in menuItems" :key="item.id">
               <RouterLink
                 :to="

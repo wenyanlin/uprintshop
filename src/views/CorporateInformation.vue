@@ -5,7 +5,31 @@
       <template #title>{{ $t('corporateInformation.title') }}</template>
     </HeroSection>
     <div class="flex flex-col items-center">
-      <section class="my-16 lg:my-32">
+      <section class="py-16 lg:py-32 overflow-hidden">
+        <div
+          class="absolute top-0 inset-0 -z-10 after:absolute after:inset-0 after:z-10 after:bg-gradient-to-b after:from-base-100 after:from-60% after:to-base-100/60"
+        >
+          <picture>
+            <source
+              :srcset="imageData.sources.avif"
+              type="image/avif"
+              sizes="100vw"
+            />
+            <source
+              :srcset="imageData.sources.webp"
+              type="image/webp"
+              sizes="100vw"
+            />
+            <img
+              :srcset="imageData.sources.jpg"
+              :src="imageData.img.src"
+              sizes="100vw"
+              class="min-w-screen h-dvh object-cover grayscale-100 dark:grayscale-0"
+              alt="..."
+              loading="lazy"
+            />
+          </picture>
+        </div>
         <div class="grid-responsive px-4 lg:px-0 xl:px-20">
           <div class="col-full mb-0 lg:mb-8 wow animate__slideInUp">
             <div class="w-full">
@@ -32,10 +56,10 @@
           <div
             class="col-full min-w-40 overflow-x-auto border border-base-300 rounded-(--radius-box) wow animate__slideInUp"
           >
-            <table class="w-full text-lg text-base-content">
-              <thead class="bg-base-200 font-semibold">
-                <tr class="*:p-4 *:w-1/4">
-                  <td>
+            <table class="w-full text-lg text-base-content bg-base-100">
+              <thead class="bg-base-200 font-semibold border-b border-base-300">
+                <tr class="*:p-4 *:text-base-content">
+                  <td class="w-1/3 lg:w-60">
                     {{
                       $t(
                         'corporateInformation.sections.boardOfDirectors.membersTitle.title',
@@ -56,13 +80,6 @@
                       )
                     }}
                   </td>
-                  <td>
-                    {{
-                      $t(
-                        'corporateInformation.sections.boardOfDirectors.membersTitle.appointed',
-                      )
-                    }}
-                  </td>
                 </tr>
               </thead>
               <tbody>
@@ -71,19 +88,29 @@
                     'corporateInformation.sections.boardOfDirectors.members',
                   )"
                   :key="$rt(profile.name)"
-                  class="text-base-content/80 *:p-4"
+                  class="text-base-content/80 *:p-4 even:bg-base-200"
                 >
                   <td>{{ $rt(profile.identity) }}</td>
-                  <td>{{ $rt(profile.name) }}</td>
-                  <td>{{ $rt(profile.gender) }}</td>
-                  <td>{{ $rt(profile.appointed) }}</td>
+                  <td class="flex flex-col gap-1 lg:gap-4 lg:flex-row">
+                    <span class="font-semibold">{{ $rt(profile.name) }}</span>
+                    <span class="text-base-content/50">{{
+                      $rt(profile.engName)
+                    }}</span>
+                  </td>
+                  <td>
+                    <span
+                      class="px-2 py-0.5 rounded-(--radius-box)"
+                      :class="getGenderClass($rt(profile.gender))"
+                      >{{ getGendarText($rt(profile.gender)) }}</span
+                    >
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-      <section class="md:bg-base-200 wow animate__slideInUp">
+      <section class="md:bg-base-200">
         <div class="grid-responsive pt-0 pb-16 md:py-32">
           <div class="col-full">
             <LocationBlock :has-title="false" map-height="sm">
@@ -111,7 +138,7 @@
           </div>
         </div>
       </section>
-      <section class="wow animate__slideInUp">
+      <section>
         <div class="grid-responsive pt-0 pb-16 md:py-32">
           <div class="col-full">
             <LocationBlock :has-title="false" map-height="sm">
@@ -139,7 +166,7 @@
           </div>
         </div>
       </section>
-      <section class="md:bg-base-200 wow animate__slideInUp">
+      <section class="md:bg-base-200">
         <div class="grid-responsive pt-0 pb-16 md:py-32">
           <div class="col-full">
             <LocationBlock :has-title="false" map-height="sm">
@@ -176,47 +203,42 @@
 </template>
 
 <script setup>
+import imageData from '@/assets/images/corporate-information/board-of-direction__background.jpg?w=800;1200;1920;2560&format=avif;webp;jpg&as=picture';
+import { useI18n } from 'vue-i18n';
 import HeroSection from '../components/HeroSection.vue';
 import LocationBlock from '../components/LocationBlock.vue';
 
-// const boardOfDirectors = [
-//   {
-//     name: '林承大',
-//     identity: '主席及行政總裁',
-//   },
-//   {
-//     name: '李爽',
-//     identity: '執行董事',
-//   },
-//   {
-//     name: '高榮',
-//     identity: '執行董事',
-//   },
-//   {
-//     name: '葉子民',
-//     identity: '執行董事',
-//   },
-//   {
-//     name: '李振武',
-//     identity: '執行董事',
-//   },
-//   {
-//     name: '黃振國',
-//     identity: '獨立非執行董事',
-//   },
-//   {
-//     name: '何嘉明',
-//     identity: '獨立非執行董事',
-//   },
-//   {
-//     name: '蘇淑韻',
-//     identity: '獨立非執行董事',
-//   },
-//   {
-//     name: '蘇恒峯',
-//     identity: '公司秘書及執業會計師',
-//   },
-// ];
+const { t } = useI18n();
+
+const getGenderClass = (genderKey) => {
+  if (genderKey.includes('female')) {
+    return 'gender-female';
+  }
+  if (genderKey.includes('male')) {
+    return 'gender-male';
+  }
+  // 如果有其他情況，可以回傳一個預設的 class 或空字串
+  return 'gender-other';
+};
+
+const getGendarText = (genderKey) => t(genderKey);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.gender-male {
+  background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+  color: var(--color-primary);
+}
+.gender-female {
+  background-color: color-mix(
+    in oklab,
+    var(--color-secondary) 20%,
+    transparent
+  );
+  color: var(--color-secondary);
+}
+.gender-other {
+  background-color: var(--color-base-300);
+  color: var(--color-base-content);
+}
+</style>

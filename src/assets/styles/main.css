@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+TC:ital,wght@100..900&display=swap');
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
@@ -56,6 +56,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  :root.lenis {
+    height: auto;
+  }
+
   :root[lang='en'] {
     font-family:
       'Figtree', 'Noto Sans TC', system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -71,7 +75,7 @@
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
   }
 

@@ -56,19 +56,19 @@ const brands = [
     title: 'ourBusinesses.brands.123print.title',
     content: 'ourBusinesses.brands.123print.content',
     url: 'https://www.123print.com.hk/',
-    imagePath: '/images/logo__123print.png',
+    imagePath: '/images/our-businesses/logo__123print.png',
   },
   {
     title: 'ourBusinesses.brands.printshop.title',
     content: 'ourBusinesses.brands.printshop.content',
     url: 'https://www.printshop.hk/',
-    imagePath: '/images/logo__print-shop.png',
+    imagePath: '/images/our-businesses/logo__print-shop.png',
   },
   {
-    title: 'Coming Soon...',
-    content: '',
-    url: '',
-    imagePath: '',
+    title: 'ourBusinesses.brands.photo520.title',
+    content: 'ourBusinesses.brands.photo520.content',
+    url: 'https://www.photo520.com',
+    imagePath: '/images/our-businesses/logo__photo-520.png',
   },
 ];
 </script>

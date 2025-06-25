@@ -1,5 +1,5 @@
 <template>
-  <section class="carousel-section relative flex md:justify-center h-screen">
+  <section class="carousel-section relative flex md:justify-center h-dvh">
     <div
       class="absolute bottom-0 left-0 w-full bg-linear-to-b from-transparent from-10 to-neutral-800 dark:to-base-100 hidden md:block"
     >
@@ -81,7 +81,7 @@
           :srcset="slide.imageData.sources.jpg"
           :src="slide.imageData.img.src"
           sizes="100vw"
-          class="min-w-screen h-screen object-cover brightness-50"
+          class="min-w-screen h-dvh object-cover brightness-50"
           alt="..."
           loading="lazy"
         />
