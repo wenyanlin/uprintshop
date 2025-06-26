@@ -4,7 +4,7 @@
     <div class="flex flex-col items-end">
       <FeaturedSection></FeaturedSection>
       <section
-        class="home__our-businesses relative mb-32 before:h-[calc(100%-8rem)] md:before:h-[calc(100%-5rem)]"
+        class="home__our-businesses relative mb-32 before:h-2/5 md:before:h-[calc(100%-2rem)] lg:before:h-[calc(100%-4rem)]"
       >
         <div class="grid-responsive pt-16 px-4 lg:px-0 xl:px-20 lg:pt-32">
           <div
@@ -40,14 +40,14 @@
             </div>
           </div>
           <div
-            class="col-span-4 flex gap-1 md:col-span-8 lg:col-span-10 lg:col-start-3 md:gap-8"
+            class="col-span-4 flex flex-col gap-4 md:flex-row md:col-span-8 lg:col-span-12"
           >
             <a
-              href="https://www.123print.com.hk/"
+              :href="item.url"
               target="_blank"
               v-for="(item, index) in ourBusiness"
               :key="item.alt"
-              class="home__our-businesses__brand flex-1 flex justify-center items-center py-4 px-2 transition-filter duration-300 ease-in-out md:px-16 md:py-8 rounded-(--radius-box) border border-base-300 backdrop-blur after:bg-base-100 dark:after:bg-base-content dark:border-base-content before:hidden md:before:block wow animate__slideInUp"
+              class="home__our-businesses__brand flex-1 flex justify-center items-center h-28 py-4 px-8 transition-filter duration-300 ease-in-out md:px-8 md:py-4 rounded-(--radius-box) border border-base-300 backdrop-blur after:bg-base-100 dark:after:bg-base-content dark:border-base-content before:hidden md:before:block wow animate__slideInUp"
               :data-wow-delay="`${index * 0.1}s`"
             >
               <img
@@ -55,6 +55,7 @@
                 :alt="
                   $t(`homepage.sections.ourBusinesses.businesses.${index}.alt`)
                 "
+                class="h-full object-contain"
               />
             </a>
           </div>
@@ -164,6 +165,10 @@ const ourBusiness = [
     url: 'https://www.printshop.hk/',
     src: '/images/our-businesses/logo__print-shop.png',
   },
+  {
+    url: 'http://www.photo520.com',
+    src: '/images/our-businesses/logo__photo-520.png',
+  },
 ];
 
 const milestones = computed(() => {
@@ -227,10 +232,13 @@ const milestones = computed(() => {
 
           &::before {
             @media (min-width: 48rem) {
-              height: calc(100% - 9rem);
+              height: calc(100% - 6rem);
             }
             @media (min-width: 64rem) {
-              height: calc(100% - 12rem);
+              height: calc(100% - 8rem);
+            }
+            @media (min-width: 80rem) {
+              height: calc(100% - 10rem);
             }
           }
         }
