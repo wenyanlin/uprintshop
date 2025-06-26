@@ -295,7 +295,8 @@ export default {
       },
       photo520: {
         title: 'Photo 520',
-        content: '-',
+        content:
+          'Responding to market demand, we invest in the most professional industrial-grade digital imaging printing equipment. From single custom copies to high-volume rolling delivery, we are committed to providing the highest quality and most cost-effective imaging products.',
       },
     },
   },

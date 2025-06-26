@@ -12,10 +12,10 @@
       >
       <section class="mb-16 bg-base-200 lg:bg-transparent">
         <div
-          class="grid-responsive px-0 py-16 items-center relative before:col-full before:absolute before:inset-x-0 before:bg-base-200 before:rounded-(--radius-box) before:-z-10 lg:before:inset-y-24 xl:before:inset-y-32"
+          class="grid-responsive px-0 py-16 items-center relative before:col-full before:absolute before:inset-x-0 before:bg-base-200 before:rounded-(--radius-box) before:-z-10 lg:before:inset-y-0 xl:before:inset-y-32"
         >
           <div
-            class="px-8 col-span-4 md:p-0 md:col-span-6 md:col-start-2 lg:col-span-4 lg:col-start-2 wow animate__slideInUp"
+            class="px-8 col-span-4 md:p-0 md:col-span-6 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-5 xl:col-start-2 wow animate__slideInUp"
           >
             <h3 class="pb-4">{{ $t('ourFocus.sections.whatIs.title') }}</h3>
             <div
@@ -28,7 +28,7 @@
             ></div>
           </div>
           <div
-            class="col-span-4 md:col-span-6 md:col-start-2 lg:col-start-6 lg:col-span-6 xl:col-start-7 xl:col-span-5 wow animate__slideInUp"
+            class="col-span-4 md:col-span-6 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-start-7 xl:col-span-5 wow animate__slideInUp"
           >
             <AdvancedProductivityEcosystem v-if="locale === 'zh'" />
             <AdvancedProductivityEcosystemEng v-if="locale === 'en'" />

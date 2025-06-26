@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="featured-center-section bg-center bg-cover"
-    :style="`background-image:url('${backgroundImage}')`"
-  >
+  <section class="featured-center-section bg-center bg-cover">
     <div class="absolute inset-0 -z-10">
       <picture v-if="imageData">
         <source
