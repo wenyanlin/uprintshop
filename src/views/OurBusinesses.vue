@@ -67,7 +67,7 @@ const brands = [
   {
     title: 'ourBusinesses.brands.photo520.title',
     content: 'ourBusinesses.brands.photo520.content',
-    url: 'http://www.photo520.com',
+    url: 'http://shop.photo520.com/',
     imagePath: '/images/our-businesses/logo__photo-520.png',
   },
 ];

@@ -166,7 +166,7 @@ const ourBusiness = [
     src: '/images/our-businesses/logo__print-shop.png',
   },
   {
-    url: 'http://www.photo520.com',
+    url: 'http://shop.photo520.com/',
     src: '/images/our-businesses/logo__photo-520.png',
   },
 ];
