@@ -5,7 +5,7 @@
       <template #title>{{ $t('corporateInformation.title') }}</template>
     </HeroSection>
     <div class="flex flex-col items-center">
-      <section class="py-16 lg:py-32 overflow-hidden">
+      <section class="relative py-16 lg:py-32 overflow-hidden">
         <div
           class="absolute top-0 inset-0 -z-10 after:absolute after:inset-0 after:z-10 after:bg-gradient-to-b after:from-base-100 after:from-60% after:to-base-100/60"
         >
@@ -24,7 +24,7 @@
               :srcset="imageData.sources.jpg"
               :src="imageData.img.src"
               sizes="100vw"
-              class="min-w-screen h-dvh object-cover grayscale-100 dark:grayscale-0"
+              class="w-full h-full object-cover grayscale-100 dark:grayscale-0"
               alt="..."
               loading="lazy"
             />
@@ -43,17 +43,19 @@
               </h2>
             </div>
           </div>
-          <!-- <ProfileBlock
+          <ProfileBlock
             v-for="profile in $tm(
               'corporateInformation.sections.boardOfDirectors.members',
             )"
             :key="$rt(profile.name)"
-            class="col-span-4 wow animate__slideInUp"
+            class="col-span-4 bg-base-100 wow animate__slideInUp"
           >
-            <template #title>{{ $rt(profile.name) }}</template>
+            <template #title>
+              {{ $rt(profile.name) }}
+            </template>
             <template #subtitle>{{ $rt(profile.identity) }}</template>
-          </ProfileBlock> -->
-          <div
+          </ProfileBlock>
+          <!-- <div
             class="col-full min-w-40 overflow-x-auto border border-base-300 rounded-(--radius-box) wow animate__slideInUp"
           >
             <table class="w-full text-lg text-base-content bg-base-100">
@@ -107,7 +109,7 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="md:bg-base-200">
@@ -207,6 +209,7 @@ import imageData from '@/assets/images/corporate-information/board-of-direction_
 import { useI18n } from 'vue-i18n';
 import HeroSection from '../components/HeroSection.vue';
 import LocationBlock from '../components/LocationBlock.vue';
+import ProfileBlock from '../components/ProfileBlock.vue';
 
 const { t } = useI18n();
 

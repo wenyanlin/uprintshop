@@ -1,7 +1,7 @@
 <template>
-  <section class="carousel-section relative flex md:justify-center h-dvh">
+  <section class="carousel-section relative flex pt-20 md:justify-center h-dvh">
     <div
-      class="absolute bottom-0 left-0 w-full bg-linear-to-b from-transparent from-10 to-neutral-800 dark:to-base-100 hidden md:block"
+      class="absolute bottom-0 left-0 w-full bg-linear-to-b from-transparent from-10 to-neutral-800 dark:to-base-100 hidden lg:block"
     >
       <div class="grid-responsive items-center">
         <div
@@ -89,7 +89,7 @@
     </div>
 
     <div
-      class="grid-responsive items-center relative my-0 md:mb-32 min-h-48 px-4 lg:px-0"
+      class="grid-responsive items-center relative my-0 md:mb-32 px-4 lg:px-0"
       @mouseenter="pauseAutoPlay"
       @mouseleave="resumeAutoPlay"
     >
@@ -118,17 +118,18 @@
         </div>
       </div> -->
       <div
-        class="col-span-4 w-full min-h-56 relative md:min-h-full md:col-span-6 lg:col-span-9 lg:col-start-3"
+        class="col-span-4 w-full grid min-h-56 relative md:min-h-full md:col-span-6 lg:col-span-9 lg:col-start-3"
       >
         <div
           v-for="(slide, index) in slides"
           :key="slide.id"
           :class="[{ active: currentIndex === index }]"
-          class="carousel-item absolute left-0 space-y-8"
+          class="carousel-item space-y-8 items-center"
+          style="grid-area: 1 / 1 / 2 / 2"
         >
           <div class="*:text-white">
             <div
-              class="carousel-item__title text-5xl font-medium tracking-wide pb-4 flex flex-col md:text-6xl lg:block"
+              class="carousel-item__title text-3xl font-medium tracking-wide pb-4 flex flex-col md:text-6xl lg:block"
             >
               <span class="uppercase pb-2 lg:pb-0">{{
                 $t(`homepage.carousel.slides.${index}.title`)
@@ -180,7 +181,7 @@
       </div>
     </div>
   </section>
-  <section class="md:hidden">
+  <section class="lg:hidden">
     <div class="w-full bg-base-200">
       <div class="grid-responsive items-center px-16">
         <div class="col-full flex flex-col gap-16 py-16">

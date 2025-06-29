@@ -302,55 +302,46 @@ export default {
         members: [
           {
             name: '林承大',
-            engName: 'Lam Shing Tai',
             identity: '主席及行政總裁',
             gender: 'gender.male',
           },
           {
             name: '李爽',
-            engName: 'Li Shuang',
             identity: '執行董事',
             gender: 'gender.female',
           },
           {
             name: '高榮',
-            engName: 'Kao Jung',
             identity: '執行董事',
             gender: 'gender.male',
           },
           {
             name: '葉子民',
-            engName: 'Yip Chi Man',
             identity: '執行董事',
             gender: 'gender.male',
           },
           {
             name: '李振武',
-            engName: 'Li Zhen wu',
             identity: '執行董事',
             gender: 'gender.male',
           },
           {
             name: '黃振國',
-            engName: 'Wong Chun Kwok',
             identity: '獨立非執行董事',
             gender: 'gender.male',
           },
           {
             name: '何嘉明',
-            engName: 'Ho Kar Ming',
             identity: '獨立非執行董事',
             gender: 'gender.male',
           },
           {
             name: '蘇淑韻',
-            engName: 'So Shuk Wan',
             identity: '獨立非執行董事',
             gender: 'gender.female',
           },
           {
             name: '蘇恒峯',
-            engName: 'So Hang Fung',
             identity: '公司秘書及執業會計師',
             gender: 'gender.male',
           },
