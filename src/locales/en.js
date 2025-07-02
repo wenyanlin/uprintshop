@@ -312,70 +312,101 @@ export default {
           name: 'Name',
           gender: 'Gender',
         },
-        members: [
-          {
-            name: 'Lam Shing Tai',
-            identity: 'Chairman and Chief Executive Officer',
-            gender: 'gender.male',
-          },
-          {
-            name: 'Li Shuang',
-            identity: 'Executive Director',
-            gender: 'gender.female',
-          },
-          {
-            name: 'Kao Jung',
-            identity: 'Executive Director',
-            gender: 'gender.male',
-          },
-          {
-            name: 'Yip Chi Man',
-            identity: 'Executive Director',
-            gender: 'gender.male',
-          },
-          {
-            name: 'Li Zhen wu',
-            identity: 'Executive Director',
-            gender: 'gender.male',
-          },
-          {
-            name: 'Wong Chun Kwok',
-            identity: 'Independent Non-Executive Director',
-            gender: 'gender.male',
-          },
-          {
-            name: 'Ho Kar Ming',
-            identity: 'Independent Non-Executive Director',
-            gender: 'gender.male',
-          },
-          {
-            name: 'So Shuk Wan',
-            identity: 'Independent Non-Executive Director',
-            gender: 'gender.female',
-          },
-          {
-            name: 'So Hang Fung',
-            identity: 'Company Secretary and Certified Public Accountant',
-            gender: 'gender.male',
-          },
-        ],
+        executiveDirector: {
+          title: 'Executive Director',
+          members: [
+            {
+              id: 'Lam Shing Tai',
+              name: 'Lam Shing Tai',
+              identity: 'Chairman and Chief Executive Officer',
+              gender: 'gender.male',
+            },
+            {
+              id: 'Li Shuang',
+              name: 'Li Shuang',
+              identity: '',
+              gender: 'gender.female',
+            },
+            {
+              id: '',
+              // id: 'Kao Jung',
+              name: 'Kao Jung',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'Yip Chi Man',
+              name: 'Yip Chi Man',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: 'Li Zhen wu',
+              name: 'Li Zhen wu',
+              identity: '',
+              gender: 'gender.male',
+            },
+          ],
+        },
+        independentNonExecutiveDirector: {
+          title: 'Independent Non-Executive Director',
+          members: [
+            {
+              id: '',
+              // id: 'Wong Chun Kwok',
+              name: 'Wong Chun Kwok',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'Ho Kar Ming',
+              name: 'Ho Kar Ming',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'So Shuk Wan',
+              name: 'So Shuk Wan',
+              identity: '',
+              gender: 'gender.female',
+            },
+          ],
+        },
+        companySecretary: {
+          title: 'Company Secretary',
+          members: [
+            {
+              id: '',
+              // id: 'So Hang Fung',
+              name: 'So Hang Fung',
+              identity: 'Certified Public Accountant',
+              gender: 'gender.male',
+            },
+          ],
+        },
       },
       HeadQuarter: {
         subTitle: '',
         title: 'Group Headquarters',
         address:
           '2nd floor, Tsing Yi Industrial Centre Phase 1,\nNo. 1 to 33 Cheung Tat Road, Tsing Yi, New Territories, Hong Kong',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d652.3216882664442!2d114.11015432634089!3d22.350278871820194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040150021e3eef%3A0xf17344ad848362f3!2z55Kw55CD5Y2w5Yi36ZuG5ZyY5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1sEng!2stw!4v1748434624187!5m2!1sEng!2stw',
       },
       RegisteredOffice: {
         subTitle: '',
         title: 'Registered Office',
         address:
           'Cricket Square, Hutchins Drive, PO Box 2681,\nGrand Cayman, KY1-1111, Cayman Islands',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7317.0505101922845!2d-81.37638383538106!3d19.294185829872152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f25866762ed7ffd%3A0xdea5a002e9d4dba0!2sCricket%20Square!5e0!3m2!1sEng!2stw!4v1748434915222!5m2!1sEng!2stw',
       },
       HongKongShareRegistrar: {
         subTitle: '',
         title: 'Hong Kong Share Registrar',
         address: '17/F, Far East Finance Centre\n16 Harcourt Road\nHong Kong',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.6231574124145!2d114.16405399129908!3d22.279902213467338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040167e08160c9%3A0x6ee7b0dd60046290!2z6YGg5p2x6YeR6J6N5Lit5b-D!5e0!3m2!1sEng!2stw!4v1748434778923!5m2!1sEng!2stw',
       },
     },
   },
@@ -415,6 +446,24 @@ export default {
         address:
           'No. 2304E-2326, Block B, Phase I, Qianhai Economic Trade Center, Nanshan Street, Qianhai Shenzhen-Hong Kong Cooperation Zone, Shenzhen',
         map: 'https://maps.google.com/maps?q=22.50,113.89+(深圳前海經貿中心一期B座)&hl=eng&z=16&output=embed',
+      },
+      location3: {
+        subTitle: '',
+        title: 'Huanyu Printing Technology (Dongguan) Co.,LTD',
+        address:
+          'Room 101, Building 9, No. 66, South Fifth Street, Qiaodong Road, Qiaotou Town, Dongguan City, Guangdong Province',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.262929306787!2d114.13!3d23.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzEyLjAiTiAxMTTCsDA3JzQ4LjAiRQ!5e0!3m2!1sEng  !2stw!4v1625147300000!5m2!1sEng!2stw',
+      },
+      location4: {
+        subTitle: '',
+        title: 'Huanyu Printing Technology (Shanghai) Co.,LTD',
+        address:
+          'Building 4, Zone B, No. 8158, Tingwei Road, Jinshan District, Shanghai',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13716.794641627716!2d121.34!3d30.86!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDUxJzM2LjAiTiAxMjHCsDIwJzI0LjAiRQ!5e0!3m2!1sEng!2stw!4v1625147300000!5m2!1sEng!2stw',
+      },
+      integrityAndAccountability: {
+        title: '誠信與問責',
+        content: `我們環球印館控股有限公司致力以誠信和全面問責的態度經營業務。我們重視每一位員工和持份者若見證任何不道德或違法行為時都應該有權舉報。\n\n如果您真誠擔心公司內有任何不當或違法行為，請透過以下保密渠道聯繫我們：[whistleblowing{'@'}123print.com.hk](mailto:whistleblowing{'@'}123print.com.hk)`,
       },
       integrityAndAccountability: {
         title: 'Integrity and Accountability',
@@ -513,5 +562,10 @@ export default {
     male: 'Male',
     female: 'Female',
     other: 'Other',
+  },
+  locationBlock: {
+    address: 'addr.',
+    telephone: 'tel.',
+    facsimile: 'fax',
   },
 };

@@ -299,70 +299,101 @@ export default {
           name: '姓名',
           gender: '性別',
         },
-        members: [
-          {
-            name: '林承大',
-            identity: '主席及行政總裁',
-            gender: 'gender.male',
-          },
-          {
-            name: '李爽',
-            identity: '執行董事',
-            gender: 'gender.female',
-          },
-          {
-            name: '高榮',
-            identity: '執行董事',
-            gender: 'gender.male',
-          },
-          {
-            name: '葉子民',
-            identity: '執行董事',
-            gender: 'gender.male',
-          },
-          {
-            name: '李振武',
-            identity: '執行董事',
-            gender: 'gender.male',
-          },
-          {
-            name: '黃振國',
-            identity: '獨立非執行董事',
-            gender: 'gender.male',
-          },
-          {
-            name: '何嘉明',
-            identity: '獨立非執行董事',
-            gender: 'gender.male',
-          },
-          {
-            name: '蘇淑韻',
-            identity: '獨立非執行董事',
-            gender: 'gender.female',
-          },
-          {
-            name: '蘇恒峯',
-            identity: '公司秘書及執業會計師',
-            gender: 'gender.male',
-          },
-        ],
+        executiveDirector: {
+          title: '執行董事',
+          members: [
+            {
+              id: 'Lam Shing Tai',
+              name: '林承大',
+              identity: '主席及行政總裁',
+              gender: 'gender.male',
+            },
+            {
+              id: 'Li Shuang',
+              name: '李爽',
+              identity: '',
+              gender: 'gender.female',
+            },
+            {
+              id: '',
+              // id: 'Kao Jung',
+              name: '高榮',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'Yip Chi Man',
+              name: '葉子民',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: 'Li Zhen wu',
+              name: '李振武',
+              identity: '',
+              gender: 'gender.male',
+            },
+          ],
+        },
+        independentNonExecutiveDirector: {
+          title: '獨立非執行董事',
+          members: [
+            {
+              id: '',
+              // id: 'Wong Chun Kwok',
+              name: '黃振國',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'Ho Kar Ming',
+              name: '何嘉明',
+              identity: '',
+              gender: 'gender.male',
+            },
+            {
+              id: '',
+              // id: 'So Shuk Wan',
+              name: '蘇淑韻',
+              identity: '',
+              gender: 'gender.female',
+            },
+          ],
+        },
+        companySecretary: {
+          title: '公司秘書',
+          members: [
+            {
+              id: '',
+              // id: 'So Hang Fung',
+              name: '蘇恒峯',
+              identity: '執業會計師',
+              gender: 'gender.male',
+            },
+          ],
+        },
       },
       HeadQuarter: {
         subTitle: 'HEADQUARTER',
         title: '集團總部',
         address:
           '2nd floor, Tsing Yi Industrial Centre Phase 1,\nNo. 1 to 33 Cheung Tat Road, Tsing Yi, New Territories, Hong Kong',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d652.3216882664442!2d114.11015432634089!3d22.350278871820194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040150021e3eef%3A0xf17344ad848362f3!2z55Kw55CD5Y2w5Yi36ZuG5ZyY5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1748434624187!5m2!1szh-TW!2stw',
       },
       RegisteredOffice: {
         subTitle: 'REGISTERED OFFICE',
         title: '註冊辦事處',
         address:
           'Cricket Square, Hutchins Drive, PO Box 2681,\nGrand Cayman, KY1-1111, Cayman Islands',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7317.0505101922845!2d-81.37638383538106!3d19.294185829872152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f25866762ed7ffd%3A0xdea5a002e9d4dba0!2sCricket%20Square!5e0!3m2!1szh-TW!2stw!4v1748434915222!5m2!1szh-TW!2stw',
       },
       HongKongShareRegistrar: {
         subTitle: 'HONG KONG SHARE REGISTRAR',
         title: '香港股份過戶處',
         address: '17/F, Far East Finance Centre\n16 Harcourt Road\nHong Kong',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.6231574124145!2d114.16405399129908!3d22.279902213467338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040167e08160c9%3A0x6ee7b0dd60046290!2z6YGg5p2x6YeR6J6N5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1748434778923!5m2!1szh-TW!2stw',
       },
     },
   },
@@ -400,6 +431,18 @@ export default {
         address:
           '深圳市前海深港合作區南山街道招商局前海經貿中心一期B座2304E號-2326',
         map: 'https://maps.google.com/maps?q=22.50,113.89+(深圳前海經貿中心一期B座)&hl=zh&z=16&output=embed',
+      },
+      location3: {
+        subTitle: 'Huanyu Printing Technology (Dongguan) Co.,LTD',
+        title: '環譽印刷科技（東莞）有限公司',
+        address: '廣東省東莞市橋頭鎮橋頭橋東路南五街66號9棟101室',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.262929306787!2d114.13!3d23.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzEyLjAiTiAxMTTCsDA3JzQ4LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1625147300000!5m2!1szh-TW!2stw',
+      },
+      location4: {
+        subTitle: 'Huanyu Printing Technology (Shanghai) Co.,LTD',
+        title: '環喻印刷科技（上海）有限公司',
+        address: '上海市金山區亭衛公路8158號4幢B區',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13716.794641627716!2d121.34!3d30.86!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDUxJzM2LjAiTiAxMjHCsDIwJzI0LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1625147300000!5m2!1szh-TW!2stw',
       },
       integrityAndAccountability: {
         title: '誠信與問責',
@@ -500,5 +543,10 @@ export default {
     male: '男',
     female: '女',
     other: '其他',
+  },
+  locationBlock: {
+    address: '地址',
+    telephone: '電話',
+    facsimile: '傳真',
   },
 };

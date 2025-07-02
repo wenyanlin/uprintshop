@@ -67,6 +67,62 @@
           </div>
         </div>
       </section>
+      <section class="wow animate__slideInUp">
+        <div class="grid-responsive">
+          <div class="col-full">
+            <LocationBlock :has-title="true">
+              <template #subtitle>{{
+                $t('contactUs.sections.location3.subTitle')
+              }}</template>
+              <template #title>{{
+                $t('contactUs.sections.location3.title')
+              }}</template>
+              <template #address>{{
+                $t('contactUs.sections.location3.address')
+              }}</template>
+              <template #map>
+                <iframe
+                  :src="$t('contactUs.sections.location3.map')"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe
+              ></template>
+            </LocationBlock>
+          </div>
+        </div>
+      </section>
+      <section class="wow animate__slideInUp">
+        <div class="grid-responsive">
+          <div class="col-full">
+            <LocationBlock :has-title="true">
+              <template #subtitle>{{
+                $t('contactUs.sections.location4.subTitle')
+              }}</template>
+              <template #title>{{
+                $t('contactUs.sections.location4.title')
+              }}</template>
+              <template #address>{{
+                $t('contactUs.sections.location4.address')
+              }}</template>
+              <template #map>
+                <iframe
+                  :src="$t('contactUs.sections.location4.map')"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe
+              ></template>
+            </LocationBlock>
+          </div>
+        </div>
+      </section>
       <section class="bg-base-200 wow animate__slideInUp">
         <div class="grid-responsive px-4 py-16 lg:px-0 xl:px-20 lg:py-32">
           <div class="col-span-8 space-y-4">

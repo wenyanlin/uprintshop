@@ -34,8 +34,8 @@
       >
         <dl class="pl-0 space-y-4 *:flex *:gap-4">
           <div v-if="$slots.address">
-            <dt class="text-base-content/60 text-nowrap" v-if="hasTitle">
-              地址
+            <dt class="text-base-content/60 text-nowrap uppercase" v-if="hasTitle">
+              {{ $t('locationBlock.address') }}
             </dt>
             <dd
               itemprop="address"
@@ -48,14 +48,14 @@
             </dd>
           </div>
           <div v-if="$slots.telephone">
-            <dt class="text-base-content/60 text-nowrap" v-if="hasTitle">
-              電話
+            <dt class="text-base-content/60 text-nowrap uppercase" v-if="hasTitle">
+              {{ $t('locationBlock.telephone') }}
             </dt>
             <dd><slot name="telephone"></slot></dd>
           </div>
           <div v-if="$slots.fax">
-            <dt class="text-base-content/60 text-nowrap" v-if="hasTitle">
-              傳真
+            <dt class="text-base-content/60 text-nowrap uppercase" v-if="hasTitle">
+              {{ $t('locationBlock.facsimile') }}
             </dt>
             <dd itemprop="faxNumber"><slot name="fax"></slot></dd>
           </div>
