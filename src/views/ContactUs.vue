@@ -52,6 +52,9 @@
               <template #address>{{
                 $t('contactUs.sections.location2.address')
               }}</template>
+              <template #telephone>{{
+                $t('contactUs.sections.location2.telephone')
+              }}</template>
               <template #map>
                 <iframe
                   :src="$t('contactUs.sections.location2.map')"

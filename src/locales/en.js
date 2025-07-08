@@ -335,13 +335,6 @@ export default {
               gender: 'gender.male',
             },
             {
-              id: '',
-              // id: 'Yip Chi Man',
-              name: 'Yip Chi Man',
-              identity: '',
-              gender: 'gender.male',
-            },
-            {
               id: 'Li Zhen wu',
               name: 'Li Zhen wu',
               identity: '',
@@ -445,6 +438,7 @@ export default {
         title: 'Printshop Printing Technology(Shenzhen)Co.,LTD',
         address:
           'No. 2304E-2326, Block B, Phase I, Qianhai Economic Trade Center, Nanshan Street, Qianhai Shenzhen-Hong Kong Cooperation Zone, Shenzhen',
+        telephone: '0755-8827 0873',
         map: 'https://maps.google.com/maps?q=22.50,113.89+(深圳前海經貿中心一期B座)&hl=eng&z=16&output=embed',
       },
       location3: {

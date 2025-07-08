@@ -322,13 +322,6 @@ export default {
               gender: 'gender.male',
             },
             {
-              id: '',
-              // id: 'Yip Chi Man',
-              name: '葉子民',
-              identity: '',
-              gender: 'gender.male',
-            },
-            {
               id: 'Li Zhen wu',
               name: '李振武',
               identity: '',
@@ -430,6 +423,7 @@ export default {
         title: '印館印刷科技（深圳）有限公司',
         address:
           '深圳市前海深港合作區南山街道招商局前海經貿中心一期B座2304E號-2326',
+        telephone: '0755-8827 0873',
         map: 'https://maps.google.com/maps?q=22.50,113.89+(深圳前海經貿中心一期B座)&hl=zh&z=16&output=embed',
       },
       location3: {
