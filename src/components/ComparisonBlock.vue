@@ -1,5 +1,5 @@
 <template>
-  <div class="comparison-block w-full">
+  <div class="comparison-block w-full -skew-y-2">
     <div
       class="comparison-block__block block-top bg-base-200 wow animate__fadeIn"
     >

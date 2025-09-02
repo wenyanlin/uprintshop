@@ -78,7 +78,7 @@ export default {
             label: '事業體',
           },
           locations: {
-            number: '5',
+            number: '4',
             label: '營運據點',
           },
           employees: {

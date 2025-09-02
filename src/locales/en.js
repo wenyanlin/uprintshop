@@ -78,7 +78,7 @@ export default {
             label: 'Business Units',
           },
           locations: {
-            number: '5',
+            number: '4',
             label: 'Locations',
           },
           employees: {
