@@ -10,7 +10,7 @@
           $t('aboutUs.missionStatement')
         }}</template></MissionStatementSection
       >
-      <section class="mb-16 wow animate__slideInUp">
+      <section class="mb-16 wow animate__slideInUp lg:mb-32">
         <div class="grid-responsive">
           <div class="col-full">
             <MarkdownFeaturedBlock

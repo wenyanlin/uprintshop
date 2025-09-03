@@ -333,8 +333,7 @@ export default {
           title: '獨立非執行董事',
           members: [
             {
-              id: '',
-              // id: 'Wong Chun Kwok',
+              id: 'Wong Chun Kwok',
               name: '黃振國',
               identity: '',
               gender: 'gender.male',
@@ -347,8 +346,7 @@ export default {
               gender: 'gender.male',
             },
             {
-              id: '',
-              // id: 'So Shuk Wan',
+              id: 'So Shuk Wan',
               name: '蘇淑韻',
               identity: '',
               gender: 'gender.female',

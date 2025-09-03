@@ -346,8 +346,7 @@ export default {
           title: 'Independent Non-Executive Director',
           members: [
             {
-              id: '',
-              // id: 'Wong Chun Kwok',
+              id: 'Wong Chun Kwok',
               name: 'Wong Chun Kwok',
               identity: '',
               gender: 'gender.male',
@@ -360,8 +359,7 @@ export default {
               gender: 'gender.male',
             },
             {
-              id: '',
-              // id: 'So Shuk Wan',
+              id: 'So Shuk Wan',
               name: 'So Shuk Wan',
               identity: '',
               gender: 'gender.female',

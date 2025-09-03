@@ -10,7 +10,7 @@
       :style="{ backgroundImage: `url(${backgroundImage})` }"
     ></div>
     <div
-      class="lg:w-6/12 p-8 lg:p-16 bg-base-100 lg:bg-base-100/90"
+      class="lg:w-5/12 p-8 lg:p-16 bg-base-100 lg:bg-base-100/90"
       :class="contentPosition"
     >
       <h4 class="pb-4 wow animate__fadeInUp">
