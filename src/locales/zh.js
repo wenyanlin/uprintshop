@@ -339,8 +339,7 @@ export default {
               gender: 'gender.male',
             },
             {
-              id: '',
-              // id: 'Ho Kar Ming',
+              id: 'Ho Kar Ming',
               name: '何嘉明',
               identity: '',
               gender: 'gender.male',
