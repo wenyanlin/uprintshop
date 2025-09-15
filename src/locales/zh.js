@@ -315,8 +315,7 @@ export default {
               gender: 'gender.female',
             },
             {
-              id: '',
-              // id: 'Kao Jung',
+              id: 'Kao Jung',
               name: '高榮',
               identity: '',
               gender: 'gender.male',
